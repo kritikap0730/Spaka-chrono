@@ -1,0 +1,159 @@
+* {
+  /*css for the whole html*/
+  margin: 0; /*chnages the margin to 0*/
+  padding: 0; /*chnages the padding to 0*/
+  box-sizing: border-box; /*refres to width and height*/
+}
+body,
+html {
+  margin-top: 60px; /*especially used for the nav and footer bar to have margin on top which is 60px */
+  background-color: antiquewhite; /*used for the whole background of the webpage*/
+} /* The popup (background) */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1200; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.navigationbar {
+  z-index: 1000; /*used for overlapping context on top for the nav bar*/
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background: black; /*sets the background color of nav bar*/
+  display: flex; /*arranges elemets according to the correct alignment*/
+  align-items: center; /*centers all the elements*/
+  position: fixed; /*keeps the nav bar position fixed*/
+  width: 100%; /*the nav bar takes the full width of the page*/
+}
+nav {
+  flex: 1; /*makes sures that the nav items takes enough space*/
+  text-align: right; /*text to the right*/
+}
+.logo {
+  font-family: "brush script MT", cursive; /*fancy looking font is added for better appereance*/
+  color: white;
+  font-size: 20px;
+  line-height: 1.5; /*makes the line space tallers*/
+  text-align: center;
+  font-style: italic; /*makes the text itallic*/
+}
+nav ul {
+  display: inline-block; /*used so that the text are in the same line instead of list*/
+  list-style-type: none; /*revomes the bullets*/
+}
+nav ul li {
+  display: inline-block;
+  margin: 20px;
+  font-size: 20px; /*sets the sixe of the font 20px*/
+  position: relative;
+}
+nav a {
+  text-decoration: none; /*removes all the decoration like underline*/
+  color: white; /*sets the text color to white*/
+}
+nav a:hover,
+nav a.active {
+  /*the color of the text changes when onmouseover & active highlights the current page we are on*/
+  color: aquamarine;
+}
+nav a.active::after,
+nav a:hover::after {
+  content: "";
+  width: 60%;
+  height: 2px;
+  background-color: aquamarine;
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+}
+nav a:hover img {
+  filter: drop-shadow(
+    0 0 5px aquamarine
+  ); /*a shadow of aquamarine is there when the mouse is over the image */
+}
+
+/* Footer Styles */
+footer {
+  background-color: black;
+  color: #fff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Footer Container */
+.SPAKA-footer {
+  background-color: black;
+  color: white;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around; /*distributes items evenly with space around them*/
+}
+
+.footer-section {
+  margin: 20px;
+  max-width: 250px;
+}
+
+.footer-container h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #f5a623;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 14px;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin: 5px 0;
+}
+
+.footer-section a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #f5a623;
+}
+
+/* Social media icons */
+.footer-section a img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.footer-section a img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #aaa;
+}

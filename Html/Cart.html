@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Sambhav Shrestha" content="Course Work" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="../CSS/Styles.css" />
+    <style>
+      .All {
+        margin-top: 150px; /* Adds additional margin towards the top */
+      }
+      /* Main container for the cart */
+      .cart-container {
+        width: 60%; /* Sets the width to 60% of the page */
+        padding-top: 10px;
+        margin: auto; /* Centers the container horizontally */
+        margin-bottom: 50px;
+        background: #fff; /* White background for the cart box */
+        padding: 20px; /* Adds padding inside the container */
+        border-radius: 10px; /* Rounds the corners of the container */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+      }
+      /* Styling each cart item */
+      .cart-item {
+        display: flex; /* Arranges the image and details in a row */
+        align-items: center; /* Aligns items vertically */
+        border-bottom: 1px solid #ddd; /* Adds a separator between items */
+        padding: 15px 0; /* Adds spacing above and below each item */
+      }
+        /* Headings styling */
+        h1,
+        h2 {
+          text-align: left; /* Center-align the text for headings */
+          color: rgb(69, 101, 116); /* Apply a soft blue-gray color to the text */
+          margin-bottom: 10px; /* Add spacing below the headings */
+        }
+    
+        /* Button styling */
+        button {
+          width: 100%;
+          padding: 15px 20px; /* Add padding inside the button */
+          border: none; /* Remove the default border */
+          border-radius: 5px; /* Round the corners of the button */
+          background-color: rgb(
+            69,
+            101,
+            116
+          ); /* Apply a blue-gray background color */
+          color: white; /* Set the text color to white */
+          font-size: 18px; /* Set the font size for the button text */
+          cursor: pointer; /* Change the cursor to a pointer on hover */
+          margin-top: 20px; /* Add spacing above the button */
+          margin-bottom: 20px;/* Add spacing below the button */
+        }
+        
+        /* Hover effect for buttons */
+        button:hover {
+          background-color: rgb(43, 66, 77); /* Change background color on hover */
+        }
+      
+        /* Styling the checkout section */
+        .cart-total {
+        text-align: right; /* Aligns total price to the right */
+        margin-top: 20px; /* Adds space above the total section */
+        }
+
+        /* Container for item suggestions */
+        .item-suggestions {
+          display: flex; /* Use flexbox layout */
+          justify-content: center; /* Center items horizontally */
+          gap: 50px; /* Add 50px spacing between items */
+          margin: 20px 0; /* Add spacing above and below the container */
+        }
+
+        /* Styling for individual items */
+        .item {
+          text-align: center; /* Center-align the content of each item */
+        }
+
+        /* Image styling for items */
+        .item img {
+          width: 150px; /* Set the width of the images to 100px */
+          height: 130px; /* Set the height of the images to 100px */
+          border-radius: 5px; /* Round the corners of the images */
+        }
+
+        /* Text styling for items */
+        .item p {
+          margin-top: 10px; /* Add spacing above the item text */
+          color: #333; /* Set text color to a dark gray */
+          font-size: 14px; /* Set the font size for the item text */
+        }
+    </style>
+  </head>
+  <body>
+    <!--Navigation bar for the website is created where the logo will takes us to homepage-->
+    <div class="navigationbar">
+      <div class="logo">
+        <a href="../homepage.html">
+          <img src="../Pic/log3.jpg" alt="logo" width="120px"
+        /></a>
+        <p>Your Legacy in Time</p>
+        <!--this is the tag line of our page-->
+      </div>
+      <nav>
+        <!--ul & li is used group items together and it also helps while adding external css-->
+        <ul>
+          <!--href is used so that it'll direct us to the anothe page when clicked-->
+          <li><a href="../homepage.html">Home</a></li>
+          <li><a href="PocketWatch.html">Shop</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Reseaarch.html">Research</a></li>
+          <li><a href="ContactUs.html">Contact Us</a></li>
+          <li>
+            <a class="active" href="Cart.html"
+              ><img src="../Pic/purse.png" alt="cart" height="30px" width="30px"
+            /></a>
+          </li>
+          <!--img tag is used for displaying imgage-->
+          <li>
+            <a href="AboutUs.html"
+              ><img
+                src="../Pic/portfolio.png"
+                alt="user"
+                height="30px"
+                width="30px"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="All"></div>
+    <div class="cart-container">
+      <!-- Main container for the cart -->
+      <h1>Your Shopping Cart</h1>
+      <!-- Heading for the cart page -->
+
+      <div class="imags" id="cart-items">
+        <h1 id="empty-cart" style="text-align: center;padding: 50px;">Your shopping cart is Empty!!! <br>Add items to it</h1>
+        <a href="PocketWatch.html"><button class="new" style="align-items: center;width: 20%;">Shop now</button></a>
+      </div>
+
+        <!-- Section displaying total price and checkout button -->
+        <div class="cart-total">
+          <h2 id="cart-total">Total: $0.00</h2>
+          <!-- Displays total price of items in cart -->
+          <button class="checkout"onclick='goo()'>Proceed to Checkout</button>
+          <!-- Button to proceed to checkout -->
+        </div>
+
+        <h2 style="text-align: center">Items You May Like</h2>
+        <div class="item-suggestions">
+          <div class="item">
+            <a href="DressWatch.html">
+              <img src="../Pic/civitas.jpg" alt="product" />
+            </a>
+            <p><strong>Civitas</strong> <br>- <strike><strong>$480</strong></strike><br /><strong>$210.00</strong></p>
+          </div>
+          <div class="item">
+            <a href="SmartWatch.html">
+              <img src="../Pic/smart_502.jpg" />
+            </a>
+            <p><strong>EVO TIME</strong> <br>- <strike><strong>$970.00</strong></strike><br /><strong>$700</strong></p>
+          </div>
+          
+          <div class="item">
+            <a href="SmartWatch.html">
+            <img src="../Pic/smart_505.jpg" />
+          </a>
+            <p><strong>NEO CONNECT</strong> <br>- <strike><strong>$999.00</strong></strike><br><strong>$499.00</strong></p>
+          </div>
+
+          <div class="item">
+            <a href="MilitaryWatch.html">
+            <img src="../Pic/military_301.jpg" />
+          </a>
+            <p><strong>IRONCLAD</strong> <br>- <strike><strong>$350.00</strong></strike><br><strong>$300.00</strong></p>
+          </div>
+
+          <div class="item">
+            <a href="DiveWatch.html">
+            <img src="../Pic/dive_103.jpg" />
+          </a>
+            <p><strong>WAVE RUNNER</strong> <br>- <strike><strong>$100.00</strong></strike><br><strong>$80.00</strong></p>
+          </div>
+        </div>
+
+        <script>
+          const cartItem = JSON.parse(localStorage.getItem("cartItem"));
+          const cartItems = document.getElementById("cart-items");
+          const emptyCart = document.getElementById("empty-cart");
+          const cartTotal = document.getElementById("cart-total");
+
+          if (cartItem) {
+            emptyCart.remove();
+            const item = document.createElement("div");
+            item.className = "cart-item";
+            item.innerHTML = `<img src="../${cartItem.image}" alt="${cartItem.name}" width="120" height="120"><div><h2>${cartItem.name}</h2><p>Price: $${cartItem.price}</p></div>`;
+            cartItems.prepend(item);
+            cartTotal.textContent = `Total: $${cartItem.price}`;
+          }
+
+          function goo(){
+            alert("This Function is not available currently")
+          }
+        </script>
+        
+      </div>
+    </div>
+  </body>
+</html>
+
+    <!--the footer section-->
+    <footer class="SPAKA-footer">
+      <div class="footer-container">
+        <div>
+          <h4 style="padding-top: 15px">SPAKAchrono</h4>
+          <a href="../homepage.html"
+            ><img src="../Pic/log3.jpg" alt="logo" width="120px"
+          /></a>
+          <p class="logo">Your Legacy in Time</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <!--quick links when clicked direct us to that page-->
+          <ul>
+            <li><a href="../homepage.html">Home</a></li>
+            <li><a href="PocketWatch.html">Products</a></li>
+            <li><a href="Reseaarch.html">Research</a></li>
+            <li><a href="ContactUs.html">Contact</a></li>
+            <li><a href="AboutUs.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <!--contact us section-->
+          <h4>Contact Us</h4>
+          <p><strong>Phone:</strong></p>
+          <p style="margin-left: 20px">+977-9816180882<br />+977-9843651432</p>
+          <p><strong>Address:</strong> Kamal Pokhari, Kathmandu, Nepal</p>
+          <p><strong>Email:</strong> raiarbina34@gmail.com<br /></p>
+        </div>
+        <div class="footer-section">
+          <!--social media section-->
+          <h4>Follow Us</h4>
+          <div>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="../Pic/facebook.png" alt="Facebook" />
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+              <img src="../Pic/twitter.png" alt="Twitter" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="../Pic/insta.png" alt="Instagram" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+              <img src="../Pic/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright Section -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Spakachrono. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

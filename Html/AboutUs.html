@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!-- This is about us page. It contains the cv of all team members. -->
+<html lang="en">
+  <head>
+    <!--meta tags so that the page will be easily available when searched-->
+    <meta name="author" content="Prashna Regmi" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--This is title of the page-->
+    <title>About Us</title>
+    <!-- Link to the external CSS file for styling the webpage -->
+    <link rel="stylesheet" href="../CSS/styles.css" />
+    <!-- Internal style css for the webpage -->
+    <style>
+      .Top {
+        margin-top: 0px; /* Set margin to 0 for all elements */
+        padding: 0; /* Set padding to 0 for all elements */
+        margin-bottom: 20px;
+      }
+
+      /* Banner Section */
+      .banner {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        display: flex; /* Flexbox for alignment */
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
+        text-align: center;
+        color: #0e0707;
+      }
+
+      /* Banner Content */
+      .banner-content {
+        display: flex; /* Flexbox for alignment */
+        align-items: center; /* Center items vertically */
+        gap: 20px; /* Gap between items */
+        background: rgba(
+          226,
+          225,
+          225,
+          0.356
+        ); /* Semi-transparent background */
+        padding: 40px 80px; /* Padding inside the container */
+        border-radius: 8px; /* Rounded corners */
+      }
+
+      /* Banner Image */
+      .banner-image {
+        width: 200px; /* Fixed width */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 6px rgba(248, 247, 247, 0.3); /* Drop shadow effect */
+      }
+
+      /* Paragraph Styling */
+      .paragraph {
+        margin-top: 20px; /* Add margin to the top of the paragraph */
+      }
+
+      /* Our Team Section Styling */
+      .section {
+        margin-top: 0px;
+        margin-bottom: 0px; /* Space below each section */
+      }
+
+      /* Team Section */
+      .team-section {
+        padding: 40px 20px; /* Padding inside the section */
+        background-color: rgba(
+          226,
+          225,
+          225,
+          0.356
+        ); /* Semi-transparent background */
+        text-align: center; /* Center text */
+        margin-bottom: 40px; /* Add space below the team section */
+      }
+
+      /* Section Title */
+      .section-title {
+        font-size: 2rem; /* Large font size */
+        font-weight: bold; /* Bold text */
+        margin-bottom: 20px; /* Space below the title */
+        color: #c83b42; /* Text color */
+      }
+
+      /* Team Grid */
+      .team-grid {
+        display: grid; /* CSS Grid layout */
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(200px, 1fr)
+        ); /* Responsive grid columns */
+        gap: 20px; /* Gap between grid items */
+        justify-items: center; /* Center items horizontally */
+      }
+
+      /* Team Member Card */
+      .team-card {
+        background-color: #e1e9eb; /* Background color */
+        color: #8b6502; /* Text color */
+        border-radius: 8px; /* Rounded corners */
+        padding: 16px; /* Padding inside the card */
+        text-align: center; /* Center text */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effect */
+      }
+
+      .team-card:hover {
+        transform: translateY(-8px); /* Move up slightly on hover */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+      }
+
+      /* Team Member Image */
+      .team-image {
+        width: 100px; /* Fixed width */
+        height: 100px; /* Fixed height */
+        border-radius: 50%; /* Circular image */
+        object-fit: cover; /* Cover the container without stretching */
+        margin-bottom: 12px; /* Space below the image */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+      }
+
+      /* Team Member Name */
+      .team-name {
+        text-decoration: none;
+        font-size: 1.25rem; /* Font size */
+        font-weight: bold; /* Bold text */
+        margin-bottom: 8px; /* Space below the name */
+      }
+
+      /* Team Member Role */
+      .team-role {
+        font-size: 1rem; /* Font size */
+        color: #191503; /* Text color */
+      }
+
+      /* Button Styling */
+      .button {
+        background-color: #d97706; /* Background color */
+        color: #ccc5ac; /* Text color */
+        padding: 12px 24px; /* Padding inside the button */
+        border: none; /* No border */
+        border-radius: 4px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        font-size: 1rem; /* Font size */
+        font-weight: bold; /* Bold text */
+      }
+
+      .button:hover {
+        background-color: #b45309; /* Darker background color on hover */
+      }
+    </style>
+    <!-- Internal style css Ends for the webpage -->
+  </head>
+  <body>
+    <!--Navigation bar for the website is created where the logo will takes us to homepage-->
+    <div class="navigationbar">
+      <div class="logo">
+        <a href="../homepage.html">
+          <img src="../Pic/log3.jpg" alt="logo" width="120px"
+        /></a>
+        <p>Your Legacy in Time</p>
+        <!--this is the tag line of our page-->
+      </div>
+      <nav>
+        <!--ul & li is used group items together and it also helps while adding external css-->
+        <ul>
+          <!--href is used so that it'll direct us to the anothe page when clicked-->
+          <li><a href="../homepage.html">Home</a></li>
+          <li><a href="PocketWatch.html">Shop</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Reseaarch.html">Research</a></li>
+          <li><a href="ContactUs.html">Contact Us</a></li>
+          <li>
+            <a href="Cart.html"
+              ><img src="../Pic/purse.png" alt="cart" height="30px" width="30px"
+            /></a>
+          </li>
+          <!--img tag is used for displaying imgage-->
+          <li>
+            <a class="active" href="AboutUs.html"
+              ><img
+                src="../Pic/portfolio.png"
+                alt="user"
+                height="30px"
+                width="30px"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <br /><br /><br /><br />
+
+    <!-- The "Banner" section introduces the meaning of our brand name SPAKAchrono.-->
+    <div class="Top">
+      <section class="section">
+        <div class="banner">
+          <div class="banner-content">
+            <!-- The image shows both vintage and modern watches to give a clear focus of the brand. -->
+            <img src="../Pic/spaka.jpg" alt="Watch" class="banner-image" />
+            <div class="text-content">
+              <h1>Welcome to Our Brand SPAKAchrono</h1>
+              <!-- Paragraphs ia all about the meaning of opur brand name. -->
+              <p class="paragraph">
+                SPAKAchrono is not a timepiece but a statement of precision,
+                innovation, and style that remains timeless. Designed for the
+                man of today who wants his form to be as good as his function,
+                our timepieces marry state-of-the-art technology with
+                sophistication in design. Every timepiece at SPAKAchrono is a
+                badge of craftsmanship which is built to outlast time, come what
+                may. Be part of the SPAKA family today and witness at every turn
+                and bend that comes your way in life-the perfect symphony
+                between style and performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!--The "Meet Our Team" section highlights the team members with images, names, roles, and links for more details. This helps build trust and adds a personal touch to the website. -->
+    <section class="team-section">
+      <h2 class="section-title">Meet Our Team</h2>
+      <div class="team-grid">
+        <!-- Team member - Arbina -->
+        <div class="team-card">
+          <a style="text-decoration: none" href="Arbina.html">
+            <img src="../Pic/arbina.jpg" alt="Arbina" class="team-image" />
+            <h3 class="team-name">Arbina</h3>
+            <p class="team-role">Team Leader</p>
+            <!-- Link to a detailed profile for this team member -->
+            <a href="Arbina.html" class="team-details-link">
+              More details</a
+            >
+          </a>
+        </div>
+        <!-- Team member - Prashna -->
+        <div class="team-card">
+          <a style="text-decoration: none" href="Prashna.html">
+            <img src="../Pic/PRASHNA.jpg" alt="Prashna" class="team-image" />
+            <h3 class="team-name">Prashna</h3>
+            <p class="team-role">Team Member</p>
+            <!-- Link to a detailed profile for this team member -->
+            <a href="Prashna.html" class="team-details-link">
+              More details</a
+            >
+          </a>
+        </div>
+        <!-- Team member - Aliza -->
+        <div class="team-card">
+          <a style="text-decoration: none" href="aliza.html">
+            <img src="../Pic/aliza.jpg" alt="Aliza" class="team-image" />
+            <h3 class="team-name">Aliza</h3>
+            <p class="team-role">Team Member</p>
+            <!-- Link to a detailed profile for this team member -->
+            <a href="aliza.html" class="team-details-link">
+              More details</a
+            >
+          </a>
+        </div>
+        <!-- Team member - Kritika -->
+        <div class="team-card">
+          <a style="text-decoration: none" href="Kritika.html">
+            <img src="../Pic/kritika.jpg" alt="Kritika" class="team-image" />
+            <h3 class="team-name">Kritika</h3>
+            <p class="team-role">Team Member</p>
+            <!-- Link to a detailed profile for this team member -->
+            <a href="Kritika.html" class="team-details-link">
+              More details</a
+            >
+          </a>
+        </div>
+        <!-- Team member - Sambhav -->
+
+        <div class="team-card">
+          <a style="text-decoration: none" href="Sambhav.html">
+            <img src="../Pic/sambhav.jpg" alt="Sambhav" class="team-image" />
+            <h3 class="team-name" style="text-decoration: none">Sambhav</h3>
+            <p class="team-role" style="text-decoration: none">Team Member</p>
+            <!-- Link to a detailed profile for this team member -->
+            <a href="Sambhav.html" class="team-details-link">
+              More details</a
+            >
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--the footer section-->
+    <footer class="SPAKA-footer">
+      <div class="footer-container">
+        <div>
+          <h4 style="padding-top: 15px">SPAKAchrono</h4>
+          <a href="../homepage.html"
+            ><img src="../Pic/log3.jpg" alt="logo" width="120px"
+          /></a>
+          <p class="logo">Your Legacy in Time</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <!--quick links when clicked direct us to that page-->
+          <ul>
+            <li><a href="../homepage.html">Home</a></li>
+            <li><a href="PocketWatch.html">Products</a></li>
+            <li><a href="Reseaarch.html">Research</a></li>
+            <li><a href="ContactUs.html">Contact</a></li>
+            <li><a href="AboutUs.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <!--contact us section-->
+          <h4>Contact Us</h4>
+          <p><strong>Phone:</strong></p>
+          <p style="margin-left: 20px">+977-9816180882<br />+977-9843651432</p>
+          <p><strong>Address:</strong> Kamal Pokhari, Kathmandu, Nepal</p>
+          <p><strong>Email:</strong> raiarbina34@gmail.com<br /></p>
+        </div>
+        <div class="footer-section">
+          <!--social media section-->
+          <h4>Follow Us</h4>
+          <div>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="../Pic/facebook.png" alt="Facebook" />
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+              <img src="../Pic/twitter.png" alt="Twitter" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="../Pic/insta.png" alt="Instagram" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+              <img src="../Pic/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright Section -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Spakachrono. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/Styles.css" />
+    <style>
+      .Mathi {
+        margin-top: 150px;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: antiquewhite;
+      }
+
+      /* The styling of the products page has begun from here */
+      .products_navbar {
+        display: flex;
+        width: 675px;
+        justify-content: center;
+        height: 50px;
+        background-color: #2c0001;
+        text-decoration: none;
+        margin: 0 auto;
+        margin-top: 20px;
+        border-radius: 10px;
+        padding: 1px;
+        align-items: center;
+        opacity: 50%;
+      }
+      .products_navbar:hover {
+        opacity: 100%;
+      }
+      .active {
+        padding: 10px;
+        margin-right: 20px;
+        color: antiquewhite;
+      }
+      .inactive {
+        padding: 10px;
+        margin-right: 20px;
+        text-decoration: none;
+      }
+
+      .products_main {
+        display: flex;
+        margin: 32px;
+        flex-wrap: wrap;
+      }
+      .watches {
+        border-radius: 20px;
+        width: 350px;
+        height: 730px;
+        background-color: rgb(255, 251, 226);
+        text-align: center;
+        margin: 20px;
+        padding: 12px;
+      }
+      .strikethrough {
+        text-decoration: line-through;
+      }
+      .img {
+        align-items: center;
+      }
+      .watch001 {
+        border-radius: 10px;
+        width: 250px;
+        height: 250px;
+      }
+      .watch001:hover {
+        transform: scale(1.1);
+      }
+      .button {
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        padding: 10px;
+        margin-top: 50px;
+        text-decoration: none;
+      }
+      .reviews_container {
+        display: flex;
+        padding: 0px;
+        justify-content: center;
+      }
+      .star {
+        height: 20px;
+        width: 20px;
+      }
+      .stars_container {
+        display: flex;
+      }
+      .review {
+        background-color: rgb(228, 228, 228);
+        opacity: 30%;
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        border-radius: 30px;
+        margin-bottom: 20px;
+      }
+      a:hover {
+        color: red;
+        transform: scale(1.1);
+      }
+      /* The styling of the products page has ended here */
+
+      /* The styling of the blog page has begun here */
+      .watchphoto {
+        width: 300px;
+        margin-right: 40px;
+        border-radius: 20px;
+      }
+      .blogheading {
+        font-size: 28px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+      .watchbody {
+        height: 150px;
+      }
+      a span {
+        display: flex;
+        width: 20px;
+        height: 30px;
+        background-color: red;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        right: -20px;
+      }
+
+      .CartTab {
+        opacity: 200%;
+        width: 400px;
+        background-color: black;
+        color: #eee;
+        position: fixed;
+        top: 170px;
+        right: 0;
+        bottom: 0;
+        display: none;
+        grid-template-rows: 70px 700px 70px;
+      }
+
+      .CartTab h1 {
+        padding: 20px;
+        margin: 0;
+        font-weight: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Navigation bar for the website is created where the logo will takes us to homepage-->
+    <div class="navigationbar">
+      <div class="logo">
+        <a href="../homepage.html">
+          <img src="../Pic/log3.jpg" alt="logo" width="120px"
+        /></a>
+        <p>Your Legacy in Time</p>
+        <!--this is the tag line of our page-->
+      </div>
+      <nav>
+        <!--ul & li is used group items together and it also helps while adding external css-->
+        <ul>
+          <!--href is used so that it'll direct us to the anothe page when clicked-->
+          <li><a href="../homepage.html">Home</a></li>
+          <li><a class="active" href="PocketWatch.html">Shop</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Reseaarch.html">Research</a></li>
+          <li><a href="ContactUs.html">Contact Us</a></li>
+          <li>
+            <a href="Cart.html"
+              ><img
+                style="position: relative"
+                src="../Pic/purse.png"
+                alt="cart"
+                height="30px"
+                width="30px"
+              />
+              <span style="width: 30px">0</span>
+            </a>
+          </li>
+          <!--img tag is used for displaying imgage-->
+          <li>
+            <a href="AboutUs.html"
+              ><img
+                src="../Pic/portfolio.png"
+                alt="user"
+                height="30px"
+                width="30px"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="Mathi">
+      <div class="CartTab">
+        <h1>Shopping cart</h1>
+        <div class="ListCart"></div>
+        <div class="btn">
+          <button class="close">CLOSE</button>
+          <button class="checkout">CHECK OUT</button>
+        </div>
+      </div>
+
+      <div class="products_navbar">
+        <a href="PocketWatch.html" class="active">Pocket watch</a>
+        <a href="MilitaryWatch.html" class="inactive">Military watch</a>
+        <a href="DiveWatch.html" class="inactive">Dive watch</a>
+        <a href="DressWatch.html" class="inactive">Dress watch</a>
+        <a href="SmartWatch.html" class="inactive">Smart watch</a>
+      </div>
+      <!-- The division class products_main has been created as a container to hold all of the watches inside of the webpage -->
+      <div class="products_main">
+        <!-- The division class watches has been created as a box to hold information about the watches, this means it holds the
+     texts, images and buttons inside this class -->
+
+        <div class="watches">
+          <!-- The image class watch001 has been created to style the image of the watch -->
+          <img class="watch001" src="../Pic/pocket_406.jpg" />
+          <h2>TEMPUS LUX</h2>
+          <p class="strikethrough">$500</p>
+          <p>$350</p>
+          <p class="watchbody" align="justify">
+            The Tempus Lux by SPAKAchrono is a pocket watch in celebration of
+            the brilliance of time with its luminous design, joined with precise
+            craftsmanship epitomizing moments of the past and future. The Tempus
+            Lux is classic, tailor-made for the connoisseur who respects times
+            gone by with the finesse of fine horology.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+            </div>
+            5 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Balen Shah: It is value for money adding beauty to my collection
+              and it also .....<a href="pocket_401.html">See More</a>
+            </p>
+          </div>
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+
+        <div class="watches">
+          <img class="watch001" src="../Pic/pocket_401.jpg" />
+          <h2>TIMELESS REVERIE</h2>
+          <p class="strikethrough">$3,500</p>
+          <p>$3,000</p>
+          <p class="watchbody" align="justify">
+            The Timeless Reverie by SPAKAchrono is a pocket watch that
+            epitomizes classic elegance and refined craftsmanship. Its
+            sophisticated design with delicate detailing will bring with it a
+            sense of nostalgia and grace. Timeless Reverie is for those who love
+            the enduring beauty of tradition and the art of fine timekeeping.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_contain../Pic/er">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/empty_star.png" />
+              <img class="star" src="../Pic/empty_star.png" />
+            </div>
+            3 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Megh Raj: this watch has added beauty to my living room even in
+              the .....<a href="pocket_402.html">See More</a>
+            </p>
+          </div>
+
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+
+        <div class="watches">
+          <img class="watch001" src="../Pic/pocket_402.jpg" />
+          <h2>CELESTIAL ARC</h2>
+          <p class="strikethrough">$4,500</p>
+          <p>$3,500</p>
+          <p class="watchbody" align="justify">
+            The Celestial Arc by SPAKAchrono is a pocket watch that fuses the
+            mystery of the heavens with poetic elegance. The arc-shaped form
+            flows like the infinite journey of the stars, while the detailed
+            craftsmanship reflects the timeless beauty of the cosmos. Celestial
+            Arc is for those who seek to capture the magic of the universe in
+            one single, mystical timepiece.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+            </div>
+            5 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Anup Raj: Definitely getting these for my sister's wedding, i will
+              purc.....<a href="pocket_403.html">See More</a>
+            </p>
+          </div>
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+        <div class="watches">
+          <img class="watch001" src="../Pic/pocket_403.jpg" />
+          <h2>STELLAR CHRONOS</h2>
+          <p class="strikethrough">$1,200</p>
+          <p>$1,000</p>
+          <p class="watchbody" align="justify">
+            The Stellar Chronos from SPAKAchrono is a pocket watch inspired by
+            the mysteries of the cosmos. The stellar design incorporates an
+            intricate starry motif that shows time in poetry, dancing across the
+            universe. The Stellar Chronos is for dreamers and explorers alike,
+            tying mystical elegance with the eternal rhythm of the stars.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/empty_star.png" />
+            </div>
+            4 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Doraemon: this is something different than i have one in my pair
+              pocke.....<a href="pocket_404.html">See More</a>
+            </p>
+          </div>
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+
+        <div class="watches">
+          <img class="watch001" src="../Pic/pocket_404.jpg" />
+          <h2>INFINITY ARC</h2>
+          <p class="strikethrough">$700</p>
+          <p>$550</p>
+          <p class="watchbody" align="justify">
+            SPAKAchrono's Infinity Arc Pocket Watch is inspired by the eternal
+            flow of time, featuring an arc-shaped design that is symbolic of
+            continuity and elegance. Favored because of its precision in
+            craftsmanship, it promises nothing short of reliability in
+            timekeeping. The Infinity Arc is the perfect piece for anyone who
+            loves the beauty and philosophy of time, with a classic style
+            balanced against timeless significance.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/empty_star.png" />
+            </div>
+            4 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Nobita: sizuka was really happy when i gifted her this watch even
+              her.....<a href="pocket_405.html">See More</a>
+            </p>
+          </div>
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+
+        <div class="watches">
+          <img class="watch001" src="../Pic/pocket_405.jpg" />
+          <h2>ANTIQUA</h2>
+          <p class="strikethrough">$900</p>
+          <p>$850</p>
+          <p class="watchbody" style="text-align: justify">
+            Antiqua by SPAKAchrono is a pocket watch timeless in its approach to
+            style and sophistication. Capturing the best of bygone eras in
+            classic design, this intricate detailing in refined aesthetics calls
+            it perfect. Antiqua is for people who appreciate the art of fine
+            timepieces and are charmed by vintage style.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/empty_star.png" />
+              <img class="star" src="../Pic/empty_star.png" />
+            </div>
+            3 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Poh: I sacrificed my dumplings for this but it is not worth
+              buying, wast.....<a href="pocket_406.html">See More</a>
+            </p>
+          </div>
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".watches .button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const watch = button.closest(".watches");
+          const price = [...watch.querySelectorAll("p")].find(
+            (item) => !item.classList.contains("strikethrough") && /^\$/.test(item.textContent.trim())
+          );
+          localStorage.setItem("cartItem", JSON.stringify({
+            name: watch.querySelector("h2").textContent.trim(),
+            price: price.textContent.replace(/[$,]/g, "").trim(),
+            image: watch.querySelector(".watch001").getAttribute("src").replace("../", ""),
+          }));
+        });
+      });
+    </script>
+
+    <!--the footer section-->
+    <footer class="SPAKA-footer">
+      <div class="footer-container">
+        <div>
+          <h4 style="padding-top: 15px">SPAKAchrono</h4>
+          <a href="../homepage.html"
+            ><img src="../Pic/log3.jpg" alt="logo" width="120px"
+          /></a>
+          <p class="logo">Your Legacy in Time</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <!--quick links when clicked direct us to that page-->
+          <ul>
+            <li><a href="../homepage.html">Home</a></li>
+            <li><a href="PocketWatch.html">Products</a></li>
+            <li><a href="Reseaarch.html">Research</a></li>
+            <li><a href="ContactUs.html">Contact</a></li>
+            <li><a href="AboutUs.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <!--contact us section-->
+          <h4>Contact Us</h4>
+          <p><strong>Phone:</strong></p>
+          <p style="margin-left: 20px">+977-9816180882<br />+977-9843651432</p>
+          <p><strong>Address:</strong> Kamal Pokhari, Kathmandu, Nepal</p>
+          <p><strong>Email:</strong> raiarbina34@gmail.com<br /></p>
+        </div>
+        <div class="footer-section">
+          <!--social media section-->
+          <h4>Follow Us</h4>
+          <div>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="../Pic/facebook.png" alt="Facebook" />
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+              <img src="../Pic/twitter.png" alt="Twitter" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="../Pic/insta.png" alt="Instagram" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+              <img src="../Pic/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright Section -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Spakachrono. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

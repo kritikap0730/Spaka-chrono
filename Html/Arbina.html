@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arbina - CV</title>
+  <link rel="stylesheet" href="../CSS/Styles.css">
+  <style>
+     .Mathi {
+        margin-top: 150px;
+
+    }
+
+ @keyframes gradient-x {
+    0%, 100% {
+      background-position: left center;
+    }
+    50% {
+      background-position: right center;
+    }
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: white;
+    border: 2px solid #ffcc80;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .name-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff8f00;
+  }
+  
+  .subtitle {
+    font-size: 1.2em;
+    color: #ff6f00;
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    color: #ff6f00;
+  }
+  
+  .icon {
+    margin-right: 5px;
+  }
+  
+  .section-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff8f00;
+    border-bottom: 2px solid #ffcc80;
+    padding-bottom: 5px;
+    margin-top: 20px;
+  }
+  
+  .text-lg {
+    font-size: 1em;
+  }
+  
+  .experience-item,
+  .education-item {
+    margin-top: 10px;
+  }
+  
+  .experience-title,
+  .degree-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff8f00;
+  }
+  
+  .responsibilities {
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+  
+  .certifications {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  .download-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .download-btn {
+    background-color: #ff8f00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .download-btn:hover {
+    background-color: #ff6f00;
+  }
+  
+  .footer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-container {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .left-content,
+  .center-content,
+  .right-content {
+    flex: 1;
+  }
+  .left-content {
+    color: #c0c0c0;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .left-content p {
+    color: #c0c0c0;
+  }
+  .center-content {
+    text-align: center;
+  }
+  
+  .right-content {
+    padding: 20px;
+    text-align: right;
+  }
+  .right-content h3 {
+    color: #d4af37;
+  }
+  
+  footer img {
+    width: 40px;
+    height: auto;
+    margin: 5px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 14px;
+  }  
+   
+  </style>
+</head>
+<body class="page">
+  <!--Navigation bar for the website is created where the logo will takes us to homepage-->
+  <div class="navigationbar">
+    <div class="logo">
+      <a href="../homepage.html">
+        <img src="../Pic/log3.jpg" alt="logo" width="120px"
+      /></a>
+      <p>Your Legacy in Time</p>
+      <!--this is the tag line of our page-->
+    </div>
+    <nav>
+      <!--ul & li is used group items together and it also helps while adding external css-->
+      <ul>
+        <!--href is used so that it'll direct us to the anothe page when clicked-->
+        <li><a href="../homepage.html">Home</a></li>
+        <li><a href="PocketWatch.html">Shop</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Reseaarch.html">Research</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
+        <li>
+          <a href="Cart.html"
+            ><img src="../Pic/purse.png" alt="cart" height="30px" width="30px"
+          /></a>
+        </li>
+        <!--img tag is used for displaying imgage-->
+        <li>
+          <a class="active" href="AboutUs.html"
+            ><img
+              src="../Pic/portfolio.png"
+              alt="user"
+              height="30px"
+              width="30px"
+          /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="Mathi"></div>
+    <body class="bg-gradient animate-gradient-x">
+      <div class="container">
+        <div class="card">
+          <div class="card-content">
+            <header class="text-center">
+              <h1 class="name-title">Arbina Rai</h1>
+                <p class="subtitle">Advocate</p>
+            <div class="contact-info">
+          <div class="contact-item">
+              <span class="icon">📧</span> raiarbina34@gmail.com
+           </div>
+            <div class="contact-item">
+              <span class="icon">📞</span> +977 9746969591
+            </div>
+            <div class="contact-item">
+              <span class="icon">📍</span> Vedetar, Dhankuta
+            </div>
+          </div>
+          <div class="photo">
+            <img src="../Pic/arbina.png" alt="Arbina" class="team-image" style="height: 150px;width: 150px;">
+            </div>
+        </header>
+        <section>
+          <h2 class="section-title">
+            <span class="icon">🕒</span> Professional Summary
+          </h2>
+          <p class="text-lg">
+            "The expert in anything was once a beginner." -Helen Hayes
+            I am a results-driven professional with years of experience in team leadership. Skilled in transforming complex datasets into actionable insights. Proficient in web designing, Data Visualization, SQL, Tableau, and Java, with a proven track record of enhancing business decision-making processes.
+          </p>
+        </section>
+        <section>
+          <h2 class="section-title">
+            <span class="icon">💼</span> Work Experience
+          </h2>
+          <div class="experience-item">
+            <h3 class="experience-title">Rohini International, Putalisadak, Kathmandu, Nepal</h3>
+            <p class="experience-company">Counsellor | IELTS/PTE instructor | November 3, 2022 December 15, 2024 |</p>
+            <ul class="responsibilities">
+            </ul>
+          </div>
+          <div class="experience-item">
+            <h3 class="experience-title">Internship</h3>
+            <p class="experience-company">Dairy Development Committee (DDC), Kathmandu Milk Supply Scheme (KMSS), Balaju, Kathmandu, Nepal </p>
+            <ul class="responsibilities">
+              <li>In-Plant Trainee | October 17, 2023 - February 8, 2024 | </li>
+             </ul>
+          </div>
+        </section>
+        <section>
+          <h2 class="section-title">
+            <span class="icon">🎓</span> Education
+          </h2>
+          <div class="education-item">
+            <h3 class="degree-title">Himali Boarding School, Doomaram, Kurseong, Darjeeling, West Bengal 734203, India</h3>
+            <p class="education-info">Physics, Chemistry, Biology, English, Nepali (Second Language), Mathematics from ISC board </p>
+            <li> | 2020-2022 | </li>
+            <li> CGPA: 86% (Best of Four) </li>
+          </div>
+        </section>
+        <section>
+          <h2 class="section-title">
+            <span class="icon">🏆</span> Certifications & Awards
+          </h2>
+          <ul class="certifications">
+            <li>AWS Academy Graduate AWS Academy Cloud Foundations (2024)</li>
+            <li>AWS Academy Graduate AWS Data Engineering (2024) </li>
+            <li>AWS Academy Graduate AWS Academy Machine Learning Foundations (2024) </li>
+            <li>AWS Academy Graduate AWS Academy Machine Learning for Natural Language (2024)</li>
+            <li>Global Professional Pathway Course (2024) </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    </div>
+  </div>
+  <a href="AboutUs.html"><img src="../Pic/Back.png" alt="backbutton" style="height: 60px; width: 60px"> </a>
+</body>
+</html>
+
+
+<!--the footer section-->
+<footer class="SPAKA-footer">
+  <div class="footer-container">
+    <div>
+      <h4 style="padding-top: 15px">SPAKAchrono</h4>
+      <a href="../homepage.html"
+        ><img src="../Pic/log3.jpg" alt="logo" width="120px"
+      /></a>
+      <p class="logo">Your Legacy in Time</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <!--quick links when clicked direct us to that page-->
+      <ul>
+        <li><a href="../homepage.html">Home</a></li>
+        <li><a href="PocketWatch.html">Products</a></li>
+        <li><a href="Reseaarch.html">Research</a></li>
+        <li><a href="ContactUs.html">Contact</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <!--contact us section-->
+      <h4>Contact Us</h4>
+      <p><strong>Phone:</strong></p>
+      <p style="margin-left: 20px">+977-9816180882<br />+977-9843651432</p>
+      <p><strong>Address:</strong> Kamal Pokhari, Kathmandu, Nepal</p>
+      <p><strong>Email:</strong> raiarbina34@gmail.com<br /></p>
+    </div>
+    <div class="footer-section">
+      <!--social media section-->
+      <h4>Follow Us</h4>
+      <div>
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="../Pic/facebook.png" alt="Facebook" />
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+          <img src="../Pic/twitter.png" alt="Twitter" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="../Pic/insta.png" alt="Instagram" />
+        </a>
+        <a href="https://www.linkedin.com" target="_blank">
+          <img src="../Pic/linkedin.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Copyright Section -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Spakachrono. All Rights Reserved.</p>
+  </div>
+</footer>
+ </body>
+</html>

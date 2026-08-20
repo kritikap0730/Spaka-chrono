@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/Styles.css" />
+    <style>
+      .Mathi {
+        margin-top: 150px;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: antiquewhite;
+      }
+
+      /* The styling of the products page has begun from here */
+      .products_navbar {
+        display: flex;
+        width: 675px;
+        justify-content: center;
+        height: 50px;
+        background-color: #2c0001;
+        text-decoration: none;
+        margin: 0 auto;
+        margin-top: 20px;
+        border-radius: 10px;
+        padding: 1px;
+        align-items: center;
+        opacity: 50%;
+      }
+      .products_navbar:hover {
+        opacity: 100%;
+      }
+      .active {
+        padding: 10px;
+        margin-right: 20px;
+        color: antiquewhite;
+      }
+      .inactive {
+        padding: 10px;
+        margin-right: 20px;
+        text-decoration: none;
+      }
+
+      .products_main {
+        display: flex;
+        margin: 32px;
+        flex-wrap: wrap;
+      }
+      .watches {
+        border-radius: 20px;
+        width: 350px;
+        height: 730px;
+        background-color: rgb(255, 251, 226);
+        text-align: center;
+        margin: 20px;
+        padding: 12px;
+      }
+      .strikethrough {
+        text-decoration: line-through;
+      }
+      .img {
+        align-items: center;
+      }
+      .watch001 {
+        border-radius: 10px;
+        width: 250px;
+        height: 250px;
+      }
+      .watch001:hover {
+        transform: scale(1.1);
+      }
+      .button {
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        padding: 10px;
+        margin-top: 50px;
+        text-decoration: none;
+      }
+      .reviews_container {
+        display: flex;
+        padding: 0px;
+        justify-content: center;
+      }
+      .star {
+        height: 20px;
+        width: 20px;
+      }
+      .stars_container {
+        display: flex;
+      }
+      .review {
+        background-color: rgb(228, 228, 228);
+        opacity: 30%;
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        border-radius: 30px;
+        margin-bottom: 20px;
+      }
+      a:hover {
+        color: red;
+        transform: scale(1.1);
+      }
+      /* The styling of the products page has ended here */
+
+      /* The styling of the blog page has begun here */
+      .watchphoto {
+        width: 300px;
+        margin-right: 40px;
+        border-radius: 20px;
+      }
+      .blogheading {
+        font-size: 28px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+      .watchbody {
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Navigation bar for the website is created where the logo will takes us to homepage-->
+    <div class="navigationbar">
+      <div class="logo">
+        <a href="../homepage.html">
+          <img src="../Pic/log3.jpg" alt="logo" width="120px"
+        /></a>
+        <p>Your Legacy in Time</p>
+        <!--this is the tag line of our page-->
+      </div>
+      <nav>
+        <!--ul & li is used group items together and it also helps while adding external css-->
+        <ul>
+          <!--href is used so that it'll direct us to the anothe page when clicked-->
+          <li><a href="../homepage.html">Home</a></li>
+          <li><a class="active" href="PocketWatch.html">Shop</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Reseaarch.html">Research</a></li>
+          <li><a href="ContactUs.html">Contact Us</a></li>
+          <li>
+            <a href="Cart.html"
+              ><img src="../Pic/purse.png" alt="cart" height="30px" width="30px"
+            /></a>
+          </li>
+          <!--img tag is used for displaying imgage-->
+          <li>
+            <a href="AboutUs.html"
+              ><img
+                src="../Pic/portfolio.png"
+                alt="user"
+                height="30px"
+                width="30px"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="Mathi">
+      <div class="products_navbar">
+        <a href="PocketWatch.html" class="inactive">Pocket watch</a>
+        <a href="MilitaryWatch.html" class="inactive">Military watch</a>
+        <a href="DiveWatch.html" class="inactive">Dive watch</a>
+        <a href="DressWatch.html" class="active">Dress watch</a>
+        <a href="SmartWatch.html" class="inactive">Smart watch</a>
+      </div>
+      <!-- The division class products_main has been created as a container to hold all of the watches inside of the webpage -->
+      <div class="products_main">
+        <!-- The division class watches has been created as a box to hold information about the watches, this means it holds the
+     texts, images and buttons inside this class -->
+
+        <div class="watches">
+          <!-- The image class watch001 has been created to style the image of the watch -->
+          <img class="watch001" src="../Pic/dress_206.jpg" />
+          <h2>LINEAR CHRONO</h2>
+          <p class="strikethrough">$300</p>
+          <p>$270</p>
+          <p class="watchbody" align="justify">
+            The Linear Chrono is the epitome of minimalist elegance with a
+            modern twist from SPAKAchrono: clean lines, sleek design, and
+            intuitively functional. Refined yet functional, it is perfect for
+            those who love simplicity and precision; Linear Chrono is a timeless
+            complement to today's style.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+            </div>
+            5 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Capy: Awesome watch, I like the packaging!! Woahh, demn .....<a
+                href="#"
+                >See More</a
+              >
+            </p>
+          </div>
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+
+        <div class="watches">
+          <img class="watch001" src="../Pic/dress_201.jpg" />
+          <h2>STELLAR LINEAGE</h2>
+          <p class="strikethrough">$250</p>
+          <p>$125</p>
+          <p class="watchbody" align="justify">
+            The Stellar Lineage by SPAKAchrono is bold and different; it stands
+            apart with its unique design and innovative features. Captivating in
+            style and innovatively functional, this watch is the real statement
+            piece for those who value individuality and exceptional
+            craftsmanship. The Stellar Lineage is for those who seek to leave an
+            impression.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/empty_star.png" />
+            </div>
+            4 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Pup: watch does not have leather belt as shown.....<a href="#"
+                >See More</a
+              >
+            </p>
+          </div>
+
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+
+        <div class="watches">
+          <img class="watch001" src="../Pic/dress_202.jpg" />
+          <h2>PRESTIGE CHRONO</h2>
+          <p class="strikethrough">$300</p>
+          <p>$240</p>
+          <p class="watchbody" align="justify">
+            The Prestige Chrono by SPAKAchrono is a luxurious combination of
+            arts and precision engineering. With minute elaborations, perfect
+            craftsmanship, and elegance of aesthetics, it is really a
+            masterpiece for real connoisseurs. Prestige Chrono embodies the
+            essence of luxury where art meets functionality in this timepiece
+            commanding admiration.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/empty_star.png" />
+              <img class="star" src="../Pic/empty_star.png" />
+            </div>
+            3 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Tom: I love the fact that the watch is as beautiful as.....<a
+                href="#"
+                >See More</a
+              >
+            </p>
+          </div>
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+        <div class="watches">
+          <img class="watch001" src="../Pic/dress_203.jpg" />
+          <h2>GRAND AFFINITY</h2>
+          <p class="strikethrough">$340</p>
+          <p>$320</p>
+          <p class="watchbody" align="justify">
+            The Grand Affinity by SPAKAchrono is truly a high-end timepiece that
+            reflects both classic charm and timeless appeal. Its elegant design
+            meets the most diligent craftsmanship, combining into an
+            exceptionally fine piece intended for those of great taste. Grand
+            Affinity is the zenith of refined luxury, perfect for those whose
+            search for transcendence goes beyond present trends.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/empty_star.png" />
+            </div>
+            4 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Jerry: I gifted this watch to my mom and she was very .....<a
+                href="#"
+                >See More</a
+              >
+            </p>
+          </div>
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+
+        <div class="watches">
+          <img class="watch001" src="../Pic/dress_204.jpg" />
+          <h2>CIVITAS</h2>
+          <p class="strikethrough">$400</p>
+          <p>$280</p>
+          <p class="watchbody" align="justify">
+            The Civitas from SPAKAchrono exudes timelessness with elegance and
+            classic design. This refinement, married to precision in
+            craftsmanship, creates just the right blend of tradition and
+            sophistication within this timepiece. Civitas is a mnemonic for
+            eternal style, crafted for connoisseurs who cherish the beauty of
+            enduring quality.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/empty_star.png" />
+            </div>
+            4 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Bijay: My daughter did not like this watch as I surprised
+              her.....<a href="#">See More</a>
+            </p>
+          </div>
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+
+        <div class="watches">
+          <img class="watch001" src="../Pic/dress_205.jpg" />
+          <h2>LUXE DIAL</h2>
+          <p class="strikethrough">$500</p>
+          <p>$375</p>
+          <p class="watchbody" align="justify">
+            The Luxe Dial by SPAKAchrono is an artistic masterpiece of great
+            sophistication, inspired by timeless luxury. Exquisitely crafted
+            with an elegant design and minute detailing, it provides a refined
+            and opulent experience. Luxe Dial is the ultimate symbol of prestige
+            for those who appreciate the finer things in life.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+            </div>
+            5 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Hrishav: Definitely the best watch brand SPAKAchrono.....<a
+                href="#"
+                >See More</a
+              >
+            </p>
+          </div>
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".watches .button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const watch = button.closest(".watches");
+          const price = [...watch.querySelectorAll("p")].find(
+            (item) => !item.classList.contains("strikethrough") && /^\$/.test(item.textContent.trim())
+          );
+          localStorage.setItem("cartItem", JSON.stringify({
+            name: watch.querySelector("h2").textContent.trim(),
+            price: price.textContent.replace(/[$,]/g, "").trim(),
+            image: watch.querySelector(".watch001").getAttribute("src").replace("../", ""),
+          }));
+        });
+      });
+    </script>
+
+    <!--the footer section-->
+    <footer class="SPAKA-footer">
+      <div class="footer-container">
+        <div>
+          <h4 style="padding-top: 15px">SPAKAchrono</h4>
+          <a href="../homepage.html"
+            ><img src="../Pic/log3.jpg" alt="logo" width="120px"
+          /></a>
+          <p class="logo">Your Legacy in Time</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <!--quick links when clicked direct us to that page-->
+          <ul>
+            <li><a href="../homepage.html">Home</a></li>
+            <li><a href="PocketWatch.html">Products</a></li>
+            <li><a href="Reseaarch.html">Research</a></li>
+            <li><a href="ContactUs.html">Contact</a></li>
+            <li><a href="AboutUs.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <!--contact us section-->
+          <h4>Contact Us</h4>
+          <p><strong>Phone:</strong></p>
+          <p style="margin-left: 20px">+977-9816180882<br />+977-9843651432</p>
+          <p><strong>Address:</strong> Kamal Pokhari, Kathmandu, Nepal</p>
+          <p><strong>Email:</strong> raiarbina34@gmail.com<br /></p>
+        </div>
+        <div class="footer-section">
+          <!--social media section-->
+          <h4>Follow Us</h4>
+          <div>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="../Pic/facebook.png" alt="Facebook" />
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+              <img src="../Pic/twitter.png" alt="Twitter" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="../Pic/insta.png" alt="Instagram" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+              <img src="../Pic/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright Section -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Spakachrono. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

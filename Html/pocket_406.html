@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/Styles.css" />
+  </head>
+  <body>
+    <div class="product_placeholder">
+      <img class="productsimg" src="../Pic/pocket_406.jpg" />
+
+      <div class="products_info">
+        <h1 class="watchname">ANTIQUA</h1>
+        <div class="ratings_placeholder">
+          <img class="star" src="../Pic/full_star.png" />
+          <img class="star" src="../Pic/full_star.png" />
+          <img class="star" src="../Pic/full_star.png" />
+          <img class="star" src="../Pic/empty_star.png" />
+          <img class="star" src="../Pic/empty_star.png" />
+
+          <div class="star_counter">
+            <p style="font-family: 'Courier New', Courier, monospace">
+              3 out of 5 Stars
+            </p>
+          </div>
+          <div class="ratingsandreviews">
+            <p
+              style="
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                  'Trebuchet MS', sans-serif;
+              "
+            >
+              100 Ratings and 50
+            </p>
+          </div>
+        </div>
+
+        <div class="prices">
+          <p class="originalprice">900</p>
+          <p class="discountedprice">850</p>
+        </div>
+
+        <div class="Stock check">
+          <p>In stock</p>
+        </div>
+        <div class="plusminus">
+          Quantity
+          <button onclick="updateQuantity(-1)">-</button>
+          <input
+            style="width: 30px"
+            type="number"
+            id="quantity"
+            value="1"
+            min="1"
+            readonly
+          />
+          <button onclick="updateQuantity(1)">+</button>
+          <script>
+            function updateQuantity(change) {
+              let quantity = document.getElementById("quantity");
+              let newValue = Math.max(1, parseInt(quantity.value) + change);
+              quantity.value = newValue;
+            }
+          </script>
+        </div>
+
+        <button
+          style="
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            height: 40px;
+            width: 200px;
+            justify-content: center;
+          "
+          onclick="localStorage.setItem('cartItem', JSON.stringify({name: 'ANTIQUA', price: '850', image: 'Pic/pocket_406.jpg'})); window.location.href = 'Cart.html';"
+        >
+          ADD TO CART
+        </button>
+      </div>
+    </div>
+
+    <div
+      style="
+        background-color: rgb(165, 165, 165);
+        margin-left: 20%;
+        margin-right: 20%;
+        border-radius: 20px;
+        padding: 20px;
+      "
+      class="products_desc"
+    >
+      <h3>Description</h3>
+      <p>
+        Antiqua by SPAKAchrono is a pocket watch timeless in its approach to
+        style and sophistication. Capturing the best of bygone eras in classic
+        design, this intricate detailing in refined aesthetics calls it perfect.
+        Antiqua is for people who appreciate the art of fine timepieces and are
+        charmed by vintage style.
+      </p>
+      <a href="PocketWatch.html">Go Back</a>
+    </div>
+  </body>
+</html>

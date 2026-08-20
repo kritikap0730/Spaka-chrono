@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/Styles.css" />
+    <style>
+      .Mathi {
+        margin-top: 150px;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: antiquewhite;
+      }
+
+      /* The styling of the products page has begun from here */
+      .products_navbar {
+        display: flex;
+        width: 675px;
+        justify-content: center;
+        height: 50px;
+        background-color: #2c0001;
+        text-decoration: none;
+        margin: 0 auto;
+        margin-top: 20px;
+        border-radius: 10px;
+        padding: 1px;
+        align-items: center;
+        opacity: 50%;
+      }
+      .products_navbar:hover {
+        opacity: 100%;
+      }
+      .active {
+        padding: 10px;
+        margin-right: 20px;
+        color: antiquewhite;
+      }
+      .inactive {
+        padding: 10px;
+        margin-right: 20px;
+        text-decoration: none;
+      }
+
+      .products_main {
+        display: flex;
+        margin: 32px;
+        flex-wrap: wrap;
+      }
+      .watches {
+        border-radius: 20px;
+        width: 350px;
+        height: 730px;
+        background-color: rgb(255, 251, 226);
+        text-align: center;
+        margin: 20px;
+        padding: 12px;
+      }
+      .strikethrough {
+        text-decoration: line-through;
+      }
+      .img {
+        align-items: center;
+      }
+      .watch001 {
+        border-radius: 10px;
+        width: 250px;
+        height: 250px;
+      }
+      .watch001:hover {
+        transform: scale(1.1);
+      }
+      .button {
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        padding: 10px;
+        margin-top: 50px;
+        text-decoration: none;
+      }
+      .reviews_container {
+        display: flex;
+        padding: 0px;
+        justify-content: center;
+      }
+      .star {
+        height: 20px;
+        width: 20px;
+      }
+      .stars_container {
+        display: flex;
+      }
+      .review {
+        background-color: rgb(228, 228, 228);
+        opacity: 30%;
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        border-radius: 30px;
+        margin-bottom: 20px;
+      }
+      a:hover {
+        color: red;
+        transform: scale(1.1);
+      }
+      /* The styling of the products page has ended here */
+
+      /* The styling of the blog page has begun here */
+      .watchphoto {
+        width: 300px;
+        margin-right: 40px;
+        border-radius: 20px;
+      }
+      .blogheading {
+        font-size: 28px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+      .watchbody {
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Navigation bar for the website is created where the logo will takes us to homepage-->
+    <div class="navigationbar">
+      <div class="logo">
+        <a href="../homepage.html">
+          <img src="../Pic/log3.jpg" alt="logo" width="120px"
+        /></a>
+        <p>Your Legacy in Time</p>
+        <!--this is the tag line of our page-->
+      </div>
+      <nav>
+        <!--ul & li is used group items together and it also helps while adding external css-->
+        <ul>
+          <!--href is used so that it'll direct us to the anothe page when clicked-->
+          <li><a href="../homepage.html">Home</a></li>
+          <li><a class="active" href="PocketWatch.html">Shop</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Reseaarch.html">Research</a></li>
+          <li><a href="ContactUs.html">Contact Us</a></li>
+          <li>
+            <a href="Cart.html"
+              ><img src="../Pic/purse.png" alt="cart" height="30px" width="30px"
+            /></a>
+          </li>
+          <!--img tag is used for displaying imgage-->
+          <li>
+            <a href="AboutUs.html"
+              ><img
+                src="../Pic/portfolio.png"
+                alt="user"
+                height="30px"
+                width="30px"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="Mathi">
+      <div class="products_navbar">
+        <a href="PocketWatch.html" class="inactive">Pocket watch</a>
+        <a href="MilitaryWatch.html" class="inactive">Military watch</a>
+        <a href="DiveWatch.html" class="active">Dive watch</a>
+        <a href="DressWatch.html" class="inactive">Dress watch</a>
+        <a href="SmartWatch.html" class="inactive">Smart watch</a>
+      </div>
+      <!-- The division class products_main has been created as a container to hold all of the watches inside of the webpage -->
+      <div class="products_main">
+        <!-- The division class watches has been created as a box to hold information about the watches, this means it holds the
+     texts, images and buttons inside this class -->
+
+        <div class="watches">
+          <!-- The image class watch001 has been created to style the image of the watch -->
+          <img class="watch001" src="../Pic/dive_101.jpg" />
+          <h2>DEEP CURRENT</h2>
+          <p class="strikethrough">$100</p>
+          <p>$80</p>
+          <p class="watchbody" align="justify">
+            The Deep Current by SPAKAchrono captures the spirit of the ocean
+            with an oceanic design and nautical precision. Built for deep-sea
+            explorations, it boasts extreme water resistance and a sturdy,
+            stylish case that reflects the power and beauty of the sea. Deep
+            Current is the perfect watch for the one who conquers the depths in
+            style and confidence.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/empty_star.png" />
+            </div>
+            4 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Subarna: The type of watch I have been looking for in my aqua
+              journey.....<a href="#">See More</a>
+            </p>
+          </div>
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+
+        <div class="watches">
+          <img class="watch001" src="../Pic/dive_102.jpg" />
+          <h2>SEA STRIKER</h2>
+          <p class="strikethrough">$400</p>
+          <p>$350</p>
+          <p class="watchbody" align="justify">
+            The Sea Striker by SPAKAchrono is a dive watch for the man who
+            craves adventure beneath the waves. Advanced water resistance and a
+            rugged design make it thrive in the deepest depths. Sea Striker
+            combines the spirit of exploration with technical precision, making
+            it the perfect companion for diving into the unknown.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+            </div>
+            5 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Sahil: Finally I can keep track of my time while swimming
+              and.....<a href="#">See More</a>
+            </p>
+          </div>
+
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+
+        <div class="watches">
+          <img class="watch001" src="../Pic/dive_103.jpg" />
+          <h2>WAVE RUNNER</h2>
+          <p class="strikethrough">$100</p>
+          <p>$80</p>
+          <p class="watchbody" align="justify">
+            The WaveRunner by SPAKAchrono is a tough, rugged dive watch that has
+            been constructed for strength, durability, and a host of other
+            qualities. With its reinforced construction, exceptional water
+            resistance, and bold design, it is engineered to withstand the
+            harshest underwater conditions. WaveRunner is the perfect timepiece
+            for those who rely on reliability and performance in extreme
+            conditions.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+            </div>
+            5 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Ayush: I like the fact that my watch did not get damaged even
+              after .....<a href="#">See More</a>
+            </p>
+          </div>
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+        <div class="watches">
+          <img class="watch001" src="../Pic/dive_104.jpg" />
+          <h2>HYDRONAUT</h2>
+          <p class="strikethrough">$800</p>
+          <p>$600</p>
+          <p class="watchbody" align="justify">
+            The Hydronaut by SPAKAchrono is a precision-engineered watch in
+            diving for the modern-day explorer. Touting state-of-the-art
+            technology, including superior water resistance and a sleek and
+            functional design, this timepiece has been built to handle the
+            harshest underwater environment. Hydronaut is the ultimate companion
+            for those seeking adventure beneath the surface, all in a sharp,
+            contemporary style.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/empty_star.png" />
+              <img class="star" src="../Pic/empty_star.png" />
+            </div>
+            3 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Kushal: belt was very wriggly and did not last in river
+              swimming.....<a href="#">See More</a>
+            </p>
+          </div>
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+
+        <div class="watches">
+          <img class="watch001" src="../Pic/dive_105.jpg" />
+          <h2>LEVIATHAN</h2>
+          <p class="strikethrough">$670</p>
+          <p>$600</p>
+          <p class="watchbody" align="justify">
+            SPAKAchrono's Leviathan is a mythological dive watch, its
+            inspiration drawn from the dark, mysterious oceanic depths. Its bold
+            design and great strength evoke the mystery and power of the
+            legendary sea creature. Designed for those adventurers who would
+            conquer the unknown, Leviathan combines poetic elegance with
+            technical prowess to plunge into the abyss.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/empty_star.png" />
+            </div>
+            4 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Arbina: finally this is the watch that i have as my best friend in
+              the river.....<a href="#">See More</a>
+            </p>
+          </div>
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+
+        <div class="watches">
+          <img class="watch001" src="../Pic/dive_106.jpg" />
+          <h2>AQUACHRON</h2>
+          <p class="strikethrough">$900</p>
+          <p>$780</p>
+          <p class="watchbody" align="justify">
+            The AquaChron by SPAKAchrono is an advanced, technical diver's
+            watch, destined for the contemporary explorer. It boasts robust
+            construction, enhanced water resistance, and accurate
+            functionality-all one could need to survive under the harshest
+            conditions in water. AquaChron is a perfect blend of innovative
+            technology with modernity of style, perfect for those explorers who
+            rule the land and dive into the sea.
+          </p>
+          <br />
+          <div class="reviews_container">
+            <div class="stars_container">
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+              <img class="star" src="../Pic/full_star.png" />
+            </div>
+            5 stars|10 ratings
+          </div>
+          <div class="review">
+            <p class="reviews">
+              Shisir: my new adventure partner for next summer, our next aqua
+              journey.....<a href="#">See More</a>
+            </p>
+          </div>
+          <a href="Cart.html" class="button">ADD TO CART</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".watches .button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const watch = button.closest(".watches");
+          const price = [...watch.querySelectorAll("p")].find(
+            (item) => !item.classList.contains("strikethrough") && /^\$/.test(item.textContent.trim())
+          );
+          localStorage.setItem("cartItem", JSON.stringify({
+            name: watch.querySelector("h2").textContent.trim(),
+            price: price.textContent.replace(/[$,]/g, "").trim(),
+            image: watch.querySelector(".watch001").getAttribute("src").replace("../", ""),
+          }));
+        });
+      });
+    </script>
+
+    <!--the footer section-->
+    <footer class="SPAKA-footer">
+      <div class="footer-container">
+        <div>
+          <h4 style="padding-top: 15px">SPAKAchrono</h4>
+          <a href="../homepage.html"
+            ><img src="../Pic/log3.jpg" alt="logo" width="120px"
+          /></a>
+          <p class="logo">Your Legacy in Time</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <!--quick links when clicked direct us to that page-->
+          <ul>
+            <li><a href="../homepage.html">Home</a></li>
+            <li><a href="PocketWatch.html">Products</a></li>
+            <li><a href="Reseaarch.html">Research</a></li>
+            <li><a href="ContactUs.html">Contact</a></li>
+            <li><a href="AboutUs.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <!--contact us section-->
+          <h4>Contact Us</h4>
+          <p><strong>Phone:</strong></p>
+          <p style="margin-left: 20px">+977-9816180882<br />+977-9843651432</p>
+          <p><strong>Address:</strong> Kamal Pokhari, Kathmandu, Nepal</p>
+          <p><strong>Email:</strong> raiarbina34@gmail.com<br /></p>
+        </div>
+        <div class="footer-section">
+          <!--social media section-->
+          <h4>Follow Us</h4>
+          <div>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="../Pic/facebook.png" alt="Facebook" />
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+              <img src="../Pic/twitter.png" alt="Twitter" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="../Pic/insta.png" alt="Instagram" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+              <img src="../Pic/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright Section -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Spakachrono. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

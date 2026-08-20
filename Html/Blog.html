@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/Styles.css" />
+    <style>
+      .mathi {
+        margin-top: 150px;
+      }
+      .blog {
+        display: flex;
+        background: url("../Pic/box_2.jpg") no-repeat center fixed; /* Fixed has been used so that the photo scrolls according to the page */
+        background-size: cover;
+        border-radius: 30px;
+        margin: 30px;
+        padding: 20px;
+        padding-left: 60px;
+      }
+      .blog1 {
+        display: flex;
+        background: url("../Pic/box_2.jpg") no-repeat center fixed; /* Fixed has been used so that the photo scrolls according to the page */
+        border-radius: 30px;
+        background-size: cover;
+        margin: 30px;
+        padding: 20px;
+        padding-left: 60px;
+      }
+      .blog2 {
+        display: flex;
+        background: url("../Pic/box_1.jpg") no-repeat center fixed; /* Fixed has been used so that the photo scrolls according to the page */
+        border-radius: 30px;
+        margin: 30px;
+        background-size: cover;
+        padding: 20px;
+        padding-left: 60px;
+      }
+      .blog3 {
+        display: flex;
+        background: url("../Pic/box_1.jpg") no-repeat center fixed; /* Fixed has been used so that the photo scrolls according to the page */
+        border-radius: 30px;
+        margin: 30px;
+        background-size: cover;
+        padding: 20px;
+        padding-left: 60px;
+      }
+      .blogbody {
+        justify-content: center;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.2
+        ); /*Change the value of 0.5(opacity) to make it darker or lighter change the
+        value of the zeros to change color or select from color picker to choose color also change this comment*/
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px;
+        margin-right: 40px;
+      }
+      .heading {
+        margin-top: 10px;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(224, 191, 184);
+      }
+      .h1 {
+        justify-content: center;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: antiquewhite;
+      }
+
+      /* The styling of the products page has begun from here */
+      .products_navbar {
+        display: flex;
+        width: 675px;
+        justify-content: center;
+        height: 50px;
+        background-color: #2c0001;
+        text-decoration: none;
+        margin: 0 auto;
+        margin-top: 20px;
+        border-radius: 10px;
+        padding: 1px;
+        align-items: center;
+        opacity: 50%;
+      }
+      .products_navbar:hover {
+        opacity: 100%;
+      }
+      .active {
+        padding: 10px;
+        margin-right: 20px;
+        color: antiquewhite;
+      }
+      .inactive {
+        padding: 10px;
+        margin-right: 20px;
+        text-decoration: none;
+      }
+
+      .products_main {
+        display: flex;
+        margin: 30px;
+        flex: 33.33%;
+        flex-wrap: wrap;
+      }
+      .watches {
+        border-radius: 20px;
+        width: 350px;
+        height: 750px;
+        background-color: rgb(255, 251, 226);
+        text-align: center;
+        margin: 20px;
+        padding: 12px;
+      }
+      .strikethrough {
+        text-decoration: line-through;
+      }
+      .img {
+        align-items: center;
+      }
+      .watch001 {
+        border-radius: 10px;
+        width: 250px;
+        height: 250px;
+      }
+      .watch001:hover {
+        transform: scale(1.1);
+      }
+      .button {
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        padding: 10px;
+        margin-top: 50px;
+        text-decoration: none;
+      }
+      .reviews_container {
+        display: flex;
+        padding: 0px;
+        justify-content: center;
+        align-items: first baseline;
+        flex-wrap: nowrap;
+      }
+      .star {
+        height: 20px;
+        width: 20px;
+      }
+      .stars_container {
+        display: flex;
+      }
+      .review {
+        background-color: rgb(228, 228, 228);
+        opacity: 30%;
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        border-radius: -30px;
+        margin-bottom: 20px;
+      }
+      a:hover {
+        color: red;
+        transform: scale(1.1);
+      }
+      /* The styling of the products page has ended here */
+
+      /* The styling of the blog page has begun here */
+      .watchphoto {
+        width: 300px;
+        margin-right: 40px;
+        border-radius: 20px;
+      }
+      .blogheading {
+        font-size: 28px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+      .watchbody {
+        height: 150px;
+      }
+      .main_watch {
+        height: 500px;
+        border-radius: 20px;
+      }
+      .watch_product {
+        display: flex;
+        margin: 30px;
+        width: 700px;
+        justify-content: center;
+      }
+      .watch_container {
+        justify-content: center;
+        width: 1000px;
+      }
+      .productsimg {
+        width: 500px;
+        margin-top: 40px;
+        height: 500px;
+        padding: 10px;
+        border-radius: 20px;
+      }
+      .originalprice {
+        text-decoration: line-through;
+      }
+      .product_placeholder {
+        display: flex;
+        padding: 0px;
+        align-items: start;
+        flex-wrap: nowrap;
+        background-color: rgba(173, 173, 173, 0.322);
+        margin: 20px;
+        flex: 20%;
+        justify-content: space-evenly;
+        margin-left: 20%;
+        margin-right: 20%;
+        border-radius: 20px;
+      }
+      .products_info {
+        margin-top: 20px;
+        width: 50%;
+        border-radius: 20px;
+      }
+
+      .ratings_placeholder {
+        display: flex;
+      }
+      .star {
+        padding-top: 25px;
+        width: 20px;
+        height: 20px;
+      }
+      .star_counter {
+        padding: 10px;
+      }
+      .ratingsandreviews {
+        padding: 10px;
+      }
+      .plusminus {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 40%;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding: 10px;
+        background-color: aliceblue;
+        border-radius: 10px;
+        justify-content: center;
+      }
+      .number {
+        margin-left: 10px;
+        margin-right: 10px;
+        stroke-width: 1px;
+        stroke: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Navigation bar for the website is created where the logo will takes us to homepage-->
+    <div class="navigationbar">
+      <div class="logo">
+        <a href="../homepage.html">
+          <img
+            src="../Pic/log3.jpg"
+            alt="logo"
+            width="120px"
+            style="opacity: 0.5"
+        /></a>
+        <p>Your Legacy in Time</p>
+        <!--this is the tag line of our page-->
+      </div>
+      <nav>
+        <!--ul & li is used group items together and it also helps while adding external css-->
+        <ul>
+          <!--href is used so that it'll direct us to the anothe page when clicked-->
+          <li><a href="../homepage.html">Home</a></li>
+          <li><a href="PocketWatch.html">Shop</a></li>
+          <li><a class="active" href="Blog.html">Blog</a></li>
+          <li><a href="Reseaarch.html">Research</a></li>
+          <li><a href="ContactUs.html">Contact Us</a></li>
+          <li>
+            <a href="Cart.html"
+              ><img src="../Pic/purse.png" alt="cart" height="30px" width="30px"
+            /></a>
+          </li>
+          <!--img tag is used for displaying imgage-->
+          <li>
+            <a href="AboutUs.html"
+              ><img
+                src="../Pic/portfolio.png"
+                alt="user"
+                height="30px"
+                width="30px"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="mathi">
+      <div class="heading">
+        <h1>ALL ABOUT CHRONOLOGY</h1>
+      </div>
+
+      <div class="blog">
+        <img
+          class="watchphoto"
+          src="../Pic/pocket_401.jpg"
+          style="opacity: 0.9"
+        />
+        <div class="blogbody">
+          <p style="color: antiquewhite" class="blogheading">
+            Our Legacy in Chronology
+          </p>
+          <p style="color: whitesmoke; font-size: 20px" class="blogcontent">
+            In the age of science and technology, the world has been
+            revolutionized. However, there has been some significant
+            transformation in the watch industry, promoting advancement with a
+            break from tradition and finally, an enhancement in the consumer’s
+            journey. Yet, it has some negative impact on the environment as its
+            add-ons the e-waste. There also has been loss of artistry in time
+            and crafts as consumers seek advanced features compromising the
+            artistry of the watch. Hence, the brand “SPAKAchrono” has been
+            introduced to do justice to both the technologically innovated and
+            undying classic watches.
+          </p>
+        </div>
+      </div>
+      <div class="blog1">
+        <div class="blogbody">
+          <p style="color: antiquewhite" class="blogheading">
+            À La Mode of Chronology
+          </p>
+          <p style="color: whitesmoke; font-size: 20px" class="blogcontent">
+            One of À la mode of smartwatches is Apple watch, Samsung watch,
+            Garmin, Google Pixel, One Plus and so on as it provides traditional
+            timekeeping look on display flexing the advancement in technology.
+            There is a reason for having smartwatches to be the talk of the
+            town, as it offers the users GPS, mobile notifications, fitness
+            tracking, heart rate tracking, and sync with other e-devices which
+            is desirable for technoids. In future, it is expected to have
+            smartwatches with the touch of AI and machine learning to optimize
+            the health features and other functions. Besides that, use of
+            kinetic energy and solar energy could be the main source of the
+            power for smartwatches which could sustain the smartness of the
+            watch.
+          </p>
+        </div>
+        <img class="watchphoto" src="../Pic/dress_201.jpg" />
+      </div>
+      <div class="blog2">
+        <img class="watchphoto" src="../Pic/smart_502.jpg" />
+        <div class="blogbody">
+          <p style="color: antiquewhite" class="blogheading">
+            Tech-Enabled Business
+          </p>
+          <p style="color: whitesmoke; font-size: 20px" class="blogcontent">
+            No wonder, the internet and technology have made business connect
+            with customers as a breeze. There are online platforms and ads that
+            are singled out to reach the users who are looking for their desired
+            chrono. On top of that AI can also track the ongoing trend and
+            enhance the marketing strategies that can make SPAKAchrono
+            competent. Blockchain technology has diminished the issue of losing
+            warranty card and other purchasing details of the product. This can
+            also help the user to find the authentic product without having to
+            be skeptical of buying duplicate products. Wearable-as-a-Service
+            models can also be introduced for commercial advertisements. This
+            can fascinate Modish to get into premium products.
+          </p>
+        </div>
+      </div>
+      <div class="blog3">
+        <div class="blogbody">
+          <p style="color: antiquewhite" class="blogheading">
+            Obstacle of Advancement in Technology
+          </p>
+          <p style="color: whitesmoke; font-size: 20px" class="blogcontent">
+            SPAKAchrono is quite mindful of the users’ private and health data
+            respecting the privacy and security of individuals with frequent
+            software updates and yet, there is always a chance of data piracy.
+            Smartwatches are prone to have shorter lifecycle in comparison as it
+            might get outdated with time and ongoing trend. Besides that, every
+            e-device has the disadvantage of degrading batteries. In addition,
+            unused electronic devices are contributing to e-wastes which might
+            be a huge environmental issue in future. Also, mining rare metals
+            for the manufacture of the watches has both ethical and ecological
+            complications. Besides that, the upgrading technology has been
+            alienating traditional watch that inherits the heritage of ancient
+            culture.
+          </p>
+        </div>
+        <img class="watchphoto" src="../Pic/military_301.jpg" />
+      </div>
+    </div>
+
+    <!--the footer section-->
+    <footer class="SPAKA-footer">
+      <div class="footer-container">
+        <div>
+          <h4 style="padding-top: 15px">SPAKAchrono</h4>
+          <a href="../homepage.html"
+            ><img src="../Pic/log3.jpg" alt="logo" width="120px"
+          /></a>
+          <p class="logo">Your Legacy in Time</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <!--quick links when clicked direct us to that page-->
+          <ul>
+            <li><a href="../homepage.html">Home</a></li>
+            <li><a href="PocketWatch.html">Products</a></li>
+            <li><a href="Reseaarch.html">Research</a></li>
+            <li><a href="ContactUs.html">Contact</a></li>
+            <li><a href="AboutUs.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <!--contact us section-->
+          <h4>Contact Us</h4>
+          <p><strong>Phone:</strong></p>
+          <p style="margin-left: 20px">+977-9816180882<br />+977-9843651432</p>
+          <p><strong>Address:</strong> Kamal Pokhari, Kathmandu, Nepal</p>
+          <p><strong>Email:</strong> raiarbina34@gmail.com<br /></p>
+        </div>
+        <div class="footer-section">
+          <!--social media section-->
+          <h4>Follow Us</h4>
+          <div>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="../Pic/facebook.png" alt="Facebook" />
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+              <img src="../Pic/twitter.png" alt="Twitter" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="../Pic/insta.png" alt="Instagram" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+              <img src="../Pic/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright Section -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Spakachrono. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

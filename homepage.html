@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<!--This is html version 5-->
+<html>
+  <head>
+    <title>SPAKAchrono</title>
+    <!--meta tags so that the page will be easily available when searched-->
+    <meta name="description" content="watch store" />
+    <meta
+      name="keyword"
+      content="women watches,Chronograph,dress,pocketwatch"
+    />
+    <meta name="author" content="kritika Pandey" />
+    <link rel="stylesheet" href="CSS/Styles.css" />
+    <!--external css is linked to this page-->
+    <style>
+      body,
+      html {
+        margin-top: 60px; /*especially used for the nav and footer bar to have margin on top which is 60px */
+        background-color: antiquewhite; /*used for the whole background of the webpage*/
+      } /* The popup (background) */
+      .popup {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1200; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.8
+        ); /* Black background with opacity */
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+      }
+
+      /* popup Content (Image) */
+      .popup-content {
+        max-width: 80%;
+        max-height: 80%; /* Prevents image from overflowing vertically */
+        margin: auto;
+        display: block; /*occupies the full width of the screen*/
+      }
+
+      /* Close Button */
+      .close {
+        position: absolute; /*position for precise layout control */
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+        cursor: pointer; /*turns the cursor to pointer*/
+      }
+
+      .close:hover {
+        color: #bbb;
+      }
+      /*image slider section*/
+      .slider {
+        height: 500px; 
+        margin: 10px 5px;
+        box-sizing: border-box;
+        overflow: hidden;
+        box-shadow: 5px 5px 10px #4f7daf8c;
+        border-radius: 8px;
+        display: flex; 
+        align-items: center; /* Vertically center */
+        justify-content: center; /* Horizontally center */
+      }
+
+      .hero img {
+          max-width: 100%;  /* Ensures the image does not exceed container width */
+          max-height: 100%; /* Ensures the image does not exceed container height */
+          object-fit: cover; /* Ensures it covers the space properly */
+      }
+
+      /*bolg section and overview of homepage*/
+      .banner {
+        position: relative; /*the content inside can be positioned at the top*/
+        width: 100%;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center; /*helps to center the content*/
+        text-align: center;
+        color: black;
+        padding: 10px;
+      }
+
+      .banner-content {
+        display: flex;
+        align-items: center;
+        gap: 20px; /*adds space between image and text*/
+        background: rgba(255, 255, 255, 0.45);
+        padding: 20px 40px;
+        border-radius: 8px; /*rounds the cornner of the box*/
+      }
+
+      .banner-image {
+        width: 200px;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 10px;
+        color: white;
+        background-color: rgb(69,101,116);
+        text-decoration: none;
+        border: none; /*removes all the border*/
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .button:hover {
+        background-color: rgb(49, 71, 82);
+      }
+      /*product section*/
+      td {
+        width: 33%;
+        padding: 10px;
+        text-align: center;
+      }
+      .product {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden; /* Hides anything that flows outside the box */
+        transition: transform 0.2s, box-shadow 0.2s; /* Used for smooth animation when the mouse is on the product */
+        background-color: rgba(255, 255, 255, 0.45);
+        gap: 20px; /*adds space between image and text*/
+        padding: 20px 40px;
+      }
+
+      .product:hover {
+        transform: translateY(
+          -5px
+        ); /* Lifts the product a little when hovered */
+      }
+
+      .product img {
+        width: 50%; /* Make the image span the full width of its container */
+        height: auto;
+        object-fit: cover; /* Makes the image fit without stretching it */
+        border-radius: 8px; /* Apply border-radius to the image */
+      }
+
+      .product-details {
+        padding: 15px;
+      }
+
+      .product-title {
+        font-size: 30px;
+        font-weight: bold; /* Fix: Changed from font-style to font-weight */
+        margin-bottom: 10px;
+      }
+
+      .product-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: rgb(69,101,116);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .product-button:hover {
+        background-color: rgb(49, 71, 82);
+      }
+
+      .original-price {
+        color: #3ea32a;
+        margin-right: 10px;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      h1:hover {
+        text-decoration: underline;
+      }
+
+      /* Team Section */
+      .team-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        scroll-snap-type: y mandatory; /* Enable vertical snapping */
+        overflow-y: scroll; /*makes the content scroll*/
+        height: 200px;
+        margin-bottom: 50px;
+        margin-top: 20px;
+      }
+      .team-section::-webkit-scrollbar {
+        display: none; /*hides the scrollbar*/
+      }
+
+      .team-member {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: rgba(255, 255, 255, 0.45);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        scroll-snap-align: start; /*contents aligns at the start of the container when scrolling*/
+        height: 200px;
+      }
+
+      .team-member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .member-info {
+        flex: 1;
+        font-size: 20px;
+        line-height: 1.6;
+      }
+
+      .member-info h3 {
+        font-size: 20px;
+        margin: 0;
+        color: #080808;
+        font-style: italic;
+      }
+
+      .member-info p {
+        margin: 5px 0 0;
+        color: #070101;
+        font-style: italic;
+      }
+
+      .stars_container .star {
+        width: 25px;
+        height: 25px;
+        padding: 0;
+        margin: 0 2px;
+        object-fit: contain; /* Ensure the stars don't distort */
+      }
+    </style>
+  </head>
+  <body>
+      <!-- The popup -->
+  <div id="myPopup" class="popup">
+    <span class="close">&times;</span><!--creates a cross button to close the popup-->
+    <img class="popup-content" id="img1">
+  </div>
+  <script>
+    var popup = document.getElementById("myPopup");
+    var popupImg = document.getElementById("img1"); // Get the popup image element
+    popupImg.src = "Pic/popup.jpeg"; //the image for the popup
+
+    // Make the image clickable to go to the product page
+    popupImg.onclick = function() {
+        window.location.href = "product.html"; // product page url
+    };
+
+    var span = document.getElementsByClassName("close")[0]; // Close button
+    span.onclick = function() {
+        popup.style.display = "none";
+    };
+  </script>
+    <!--Navigation bar for the website is created where the logo will takes us to homepage-->
+    <div class="navigationbar">
+      <div class="logo">
+        <a href="homepage.html">
+          <img src="Pic/log3.jpg" alt="logo" width="120px"
+        /></a>
+        <p>Your Legacy in Time</p>
+        <!--this is the tag line of our page-->
+      </div>
+      <nav>
+        <!--ul & li is used group items together and it also helps while adding external css-->
+        <ul>
+          <!--href is used so that it'll direct us to the anothe page when clicked-->
+          <li><a class="active" href="homepage.html">Home</a></li>
+          <li><a href="Html/PocketWatch.html">Shop</a></li>
+          <li><a href="Html/Blog.html">Blog</a></li>
+          <li><a href="Html/Reseaarch.html">Research</a></li>
+          <li><a href="Html/ContactUs.html">Contact Us</a></li>
+          <li>
+            <a href="Html/Cart.html"
+              ><img src="Pic/purse.png" alt="cart" height="30px" width="30px"
+            /></a>
+          </li>
+          <!--img tag is used for displaying imgage-->
+          <li>
+            <a href="Html/AboutUs.html"
+              ><img
+                src="Pic/portfolio.png"
+                alt="user"
+                height="30px"
+                width="30px"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <br /><br /><br /><br />
+    <section>
+      <div class="slider">
+        <!--image slider is added-->
+        <div id="hero">
+          <img src="Pic/opening.jpeg" />
+        </div>
+      </div>
+      <script>
+        var images = [
+          "Pic/nature.jpeg",
+          "Pic/confidence.jpeg",
+          "Pic/timeless.jpeg",
+          "Pic/summer.jpeg",
+          "Pic/opening.jpeg",
+        ];
+        var y = 0;
+        var imgs = document.getElementById("hero");
+        setInterval(slider, 3000); //The setInterval() calls a function at theintervals (in milliseconds).
+        function slider() {
+          //the function for the image slider to work
+          if (y < images.length) {
+            y = y + 1;
+          } else {
+            y = 1;
+          }
+          imgs.innerHTML = "<img src=" + images[y - 1] + ">";
+        }
+      </script>
+    </section>
+    <!-- The "Banner" section introduces the website's purpose and background to users in an engaging way. -->
+
+    <section>
+      <!--represents a section of a documentation-->
+      <div class="banner">
+        <div
+          class="banner-content"
+          style="background-color: rgba(226, 225, 225, 0.356)"
+        >
+          <!-- The image showcases vintage and modern watches to highlight the brand's focus. -->
+          <img src="Pic/banner.jpg" alt="Watch" class="banner-image" />
+          <div class="text-content">
+            <h2>Welcome to Our Brand SPAKAchrono</h2>
+            <!-- Paragraphs providing details about the company's mission, 
+                  history, and values to create a connection with users. -->
+            <p class="paragraph" style="font-size: 18px; font-style: italic">
+              SPAKAchrono is not just a watch, it's a statement of precision,
+              innovation, and timeless style. Crafted for those who appreciate
+              both form and function, our timepieces blend cutting-edge
+              technology with sophisticated design. Each SPAKAchrono watch is a
+              symbol of craftsmanship, built to withstand the test of time, no
+              matter the adventure. Join the SPAKAchrono family today and
+              experience the perfect harmony of style and performance, wherever
+              life takes you.<br />
+              In the age of science and technology, the world has been
+              revolutionized. However, there has been some significant
+              transformation in the watch industry, promoting advancement with a
+              break from tradition and finally, an enhancement in the consumer's
+              journey. Yet, it has some negative impact on the environment as
+              its add-ons the e-waste. There also has been loss of artistry in
+              time and crafts as consumers seek advanced features compromising
+              the artistry of the watch. Hence, the brand “SPAKAchrono” has been
+              established to do justice to both the technologically innovated
+              and undying classic watches.
+            </p>
+            <br />
+
+            <a href="Html/Blog.html" class="button">Discover more</a
+            ><!--takes us to blog page when the button is clicked-->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--br is uded for line break-->
+    <h1>
+      <a
+        href="Html/PocketWatch.html"
+        style="
+          color: black;
+          text-decoration: none;
+          margin: 0;
+          padding-left: 10px;
+          font-style: italic;
+        "
+        >Our Products</a
+      >
+    </h1>
+    <!--when the our products is clicked it takes us to the product page-->
+    <table>
+      <!--table tag is used for proper algnment of the code showed in table format-->
+      <tr>
+        <!--represents row of a table-->
+        <td>
+          <!--represents data of a table-->
+
+          <div
+            class="product"
+            style="background-color: rgba(226, 225, 225, 0.356)"
+          >
+            <a href="Html/DressWatch.html">
+              <!--class is used for external css-->
+              <a href="Html/DressWatch.html"
+                ><img src="Pic/civitas.jpg" alt="product" /></a
+              ><!--img is added-->
+              <div class="product-details">
+                <h2 class="product-title">Civitas</h2>
+                <!--a text is added in h2 heading-->
+                <div class="stars_container">
+                  <img class="star" src="Pic/full_star.png" />
+                  <img class="star" src="Pic/full_star.png" />
+                  <img class="star" src="Pic/full_star.png" />
+                  <img class="star" src="Pic/full_star.png" />
+                  <img class="star" src="Pic/full_star.png" />
+                </div>
+                <span class="original-price">30% Off</span
+                ><br /><!--used for easier application of css-->
+                <a href="Html/Cart.html" class="product-button" data-product="Civitas" data-price="210.00" data-image="Pic/civitas.jpg">Buy Now</a
+                ><!--when clicked on buy now takes us to the cart page-->
+              </div>
+            </a>
+          </div>
+        </td>
+        <td>
+          <div
+            class="product"
+            style="background-color: rgba(226, 225, 225, 0.356)"
+          >
+            <!--same code is copied 2 more times-->
+            <a href="Html/SmartWatch.html"
+              ><img src="Pic/smart pulse.jpg" alt="Product 2"
+            /></a>
+            <div class="product-details">
+              <h2 class="product-title">Smart pulse</h2>
+              <div class="stars_container">
+                <!--the star is added for the review-->
+                <img class="star" src="Pic/full_star.png" />
+                <img class="star" src="Pic/full_star.png" />
+                <img class="star" src="Pic/full_star.png" />
+                <img class="star" src="Pic/empty_star.png" />
+                <img class="star" src="Pic/empty_star.png" />
+              </div>
+              <span class="original-price">50% Off</span><br />
+              <a href="Html/Cart.html" class="product-button" data-product="Smart pulse" data-price="700.00" data-image="Pic/smart pulse.jpg">Buy Now</a>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div
+            class="product"
+            style="background-color: rgba(226, 225, 225, 0.356)"
+          >
+            <a href="Html/PocketWatch.html"
+              ><img src="Pic/antiqua.jpg" alt="Product 3"
+            /></a>
+            <div class="product-details">
+              <h2 class="product-title">Antiqua</h2>
+              <div class="stars_container">
+                <img class="star" src="Pic/full_star.png" />
+                <img class="star" src="Pic/full_star.png" />
+                <img class="star" src="Pic/full_star.png" />
+                <img class="star" src="Pic/full_star.png" />
+                <img class="star" src="Pic/empty_star.png" />
+              </div>
+
+              <span class="original-price">10% Off</span><br />
+              <a href="Html/Cart.html" class="product-button" data-product="Antiqua" data-price="850.00" data-image="Pic/antiqua.jpg">Buy Now</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <br /><br />
+    <!--the team members info is added and can be scrolled to view another members details-->
+    <h1>
+      <a
+        href="Html/AboutUs.html"
+        style="
+          color: black;
+          padding-left: 10px;
+          text-decoration: none;
+          font-style: italic;
+        "
+        >Get to know us</a
+      >
+    </h1>
+    <div class="team-section">
+      <div class="team-member">
+        <a href="Html/AboutUs.html"
+          ><img src="Pic/kritika.jpg" alt="Member 1"
+        /></a>
+        <div class="member-info">
+          <h3>Kritika</h3>
+          <p>
+            Proficient in communication skills, ensuring clear and effective
+            collaboration with teams and stakeholders. Experienced in
+            programming with C, Java, and HTML/CSS, capable of developing
+            efficient algorithms, versatile applications, and user-friendly web
+            designs. Completed an AWS course, gaining expertise in cloud
+            computing, including deploying and managing applications on key AWS
+            services. Dedicated to continuous learning and applying technical
+            knowledge to solve real-world challenges..
+          </p>
+        </div>
+      </div>
+      <div class="team-member">
+        <a href="Html/AboutUs.html"
+          ><img src="Pic/arbina.jpg" alt="Member 2"
+        /></a>
+        <div class="member-info">
+          <h3>Arbina</h3>
+          <p>
+            The expert in anything was once a beginner." -Helen Hayes I am a
+            results-driven professional with years of experience in team
+            leadership. Skilled in transforming complex datasets into actionable
+            insights. Proficient in web designing, Data Visualization, SQL,
+            Tableau, and Java, with a proven track record of enhancing business
+            decision-making processes.
+          </p>
+        </div>
+      </div>
+      <div class="team-member">
+        <a href="Html/AboutUs.html"
+          ><img src="Pic/PRASHNA.jpg" alt="Member 3"
+        /></a>
+        <div class="member-info">
+          <h3>Prashna</h3>
+          <p>
+            Creative, meticulous graphic designer with three years of work
+            experience in visual design, identity design, and digital media.
+            Proficient in Adobe Creative Suite-software such as Photoshop,
+            Illustrator, and InDesign-strong understanding of typography,
+            layout, and color theory. With close work with clients, come
+            visually appealing designs to meet brand objectives. Passionate
+            about keeping current on updated design trends and continually
+            refining my skills.
+          </p>
+        </div>
+      </div>
+      <div class="team-member">
+        <a href="Html/AboutUs.html"
+          ><img src="Pic/sambhav.jpg" alt="Member 3"
+        /></a>
+        <div class="member-info">
+          <h3>Sambhav</h3>
+          <p>
+            Proficient in communication skills, ensuring clear and effective
+            collaboration with teams and stakeholders. Experienced in
+            programming with C, Java, and HTML/CSS, capable of developing
+            efficient algorithms, versatile applications, and user-friendly web
+            designs. Completed an AWS course, gaining expertise in cloud
+            computing, including deploying and managing applications on key AWS
+            services. Dedicated to continuous learning and applying technical
+            knowledge to solve real-world challenges.
+          </p>
+        </div>
+      </div>
+      <div class="team-member">
+        <a href="Html/AboutUs.html"
+          ><img src="Pic/aliza.jpg" alt="Member 3"
+        /></a>
+        <div class="member-info">
+          <h3>Aliza</h3>
+          <p>
+            Passionate horologist with over 15 years of experience in watch
+            collection, restoration, and appraisal. Dedicated to preserving the
+            art of timekeeping and sharing knowledge with fellow enthusiasts.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".product-button").forEach((button) => {
+        button.addEventListener("click", () => {
+          localStorage.setItem(
+            "cartItem",
+            JSON.stringify({
+              name: button.dataset.product,
+              price: button.dataset.price,
+              image: button.dataset.image,
+            })
+          );
+        });
+      });
+    </script>
+
+    <!--the footer section-->
+    <footer class="SPAKA-footer">
+      <div class="footer-container">
+        <div>
+          <h4 style="padding-top: 15px">SPAKAchrono</h4>
+          <a href="homepage.html"
+            ><img src="Pic/log3.jpg" alt="logo" width="120px"
+          /></a>
+          <p class="logo">Your Legacy in Time</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <!--quick links when clicked direct us to that page-->
+          <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="Html/PocketWatch.html">Products</a></li>
+            <li><a href="Html/Reseaarch.html">Research</a></li>
+            <li><a href="Html/ContactUs.html">Contact</a></li>
+            <li><a href="Html/AboutUs.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <!--contact us section-->
+          <h4>Contact Us</h4>
+          <p><strong>Phone:</strong></p>
+          <p style="margin-left: 20px">+977-9816180882<br />+977-9843651432</p>
+          <p><strong>Address:</strong> Kamal Pokhari, Kathmandu, Nepal</p>
+          <p><strong>Email:</strong> raiarbina34@gmail.com<br /></p>
+        </div>
+        <div class="footer-section">
+          <!--social media section-->
+          <h4>Follow Us</h4>
+          <div>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="Pic/facebook.png" alt="Facebook" />
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+              <img src="Pic/twitter.png" alt="Twitter" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="Pic/insta.png" alt="Instagram" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+              <img src="Pic/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright Section -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Spakachrono. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

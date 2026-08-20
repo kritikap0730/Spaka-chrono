@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Sambhav " content="Course Work" />
+    <title>Contact Us</title>
+    <!-- Linking external stylesheet -->
+    <link rel="stylesheet" href="../CSS/Styles.css" />
+    <style>
+      /* Styling for the main container */
+      .mathi {
+        margin-top: 170px;
+      }
+
+      /* Container for the content, sets width and adds margin and padding */
+      .container {
+        width: 70%;
+        margin: 20px auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Header styling */
+      h1,
+      h2 {
+        text-align: center;
+        color: rgb(69, 101, 116);
+      }
+
+      /* Styling for the contact form */
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 20px;
+        
+      }
+
+      .contact-form label {
+        font-weight: bold;
+        font-size: 15 px;
+      }
+
+      /* Input and textarea field styling */
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Styling specific to textarea fields */
+      .contact-form textarea {
+        resize: none;
+        height: 100px;
+      }
+
+      /* Button styling */
+      button {
+          width: 100%;
+          padding: 15px 20px; /* Add padding inside the button */
+          border: none; /* Remove the default border */
+          border-radius: 5px; /* Round the corners of the button */
+          background-color: rgb(
+            69,
+            101,
+            116
+          ); /* Apply a blue-gray background color */
+          color: white; /* Set the text color to white */
+          font-size: 18px; /* Set the font size for the button text */
+          cursor: pointer; /* Change the cursor to a pointer on hover */
+          margin-top: 5px; /* Add spacing above the button */
+          margin-bottom: 20px;/* Add spacing below the button */
+        }
+        
+        /* Hover effect for buttons */
+        button:hover {
+          background-color: rgb(43, 66, 77); /* Change background color on hover */
+        }
+
+      /* Flex container for contact info and map */
+      .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      /* Contact info styling */
+      .contact-info {
+        flex: 1;
+      }
+
+      .contact-info p {
+        margin: 5px 0;
+        margin-left: 20px;
+      }
+
+      /* Map container styling */
+      .map-container {
+        flex: 1;
+      }
+
+      /* Map iframe styling */
+      iframe {
+        padding-right: 20px;
+        width: 100%;
+        height: 300px;
+        border: 1px solid #c0c0c0;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="/JS/ContactUs.js"></script>
+    <!--Navigation bar for the website is created where the logo will takes us to homepage-->
+    <div class="navigationbar">
+      <div class="logo">
+        <a href="../homepage.html">
+          <img src="../Pic/log3.jpg" alt="logo" width="120px"
+        /></a>
+        <p>Your Legacy in Time</p>
+        <!--this is the tag line of our page-->
+      </div>
+      <nav>
+        <!--ul & li is used group items together and it also helps while adding external css-->
+        <ul>
+          <!--href is used so that it'll direct us to the anothe page when clicked-->
+          <li><a href="../homepage.html">Home</a></li>
+          <li><a href="PocketWatch.html">Shop</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Reseaarch.html">Research</a></li>
+          <li><a class="active" href="ContactUs.html">Contact Us</a></li>
+          <li>
+            <a href="Cart.html"
+              ><img src="../Pic/purse.png" alt="cart" height="30px" width="30px"
+            /></a>
+          </li>
+          <!--img tag is used for displaying imgage-->
+          <li>
+            <a href="AboutUs.html"
+              ><img
+                src="../Pic/portfolio.png"
+                alt="user"
+                height="30px"
+                width="30px"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Main content -->
+    <div class="mathi">
+      <div class="container">
+        <!-- Heading -->
+        <h1>Send Us Your Enquiry</h1>
+
+        <!-- Contact Form -->
+        <form id="myForm" class="contact-form">
+        
+          <label for="name">Full Name*</label>
+          <input type="text" id="name" name="name" placeholder="Enter your first name"/>
+          
+
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" placeholder="Enter your Email" />
+
+          <label for="phone">Phone*</label>
+          <input type="text" id="phone" name="phone" placeholder="Enter your phone number" />
+
+          <label for="message">What's on your mind?*</label>
+          <textarea id="message" name="message" rows="4" cols="30" placeholder="Enter your message"></textarea>
+
+          <button type="button" onclick="validateForm()">Submit</button>
+        </form>
+
+        <!-- Flex container for contact info and map -->
+        <div class="flex-container">
+          <div class="contact-info">
+            <!-- Contact information -->
+            <h2>Contact Information</h2>
+            <p>
+              <strong>Phone:</strong>&nbsp;+977-9816180882<br />
+              <p style="margin-left: 75px; margin-bottom: 20px; padding: auto;">
+                +977-9863709051<br />
+                +977-9746969591<br />
+                +977-9865224977<br />
+                +977-9843651432
+              </p>
+            </p>
+            <p style="margin-bottom: 20px;">
+              <strong>Address:</strong>Kamal Pokhari, Kathmandu, Nepal
+            </p>
+            <p>
+              <strong>Email:</strong>&nbsp;shresthasambhav07@gmail.com
+              <br />
+            </p>
+            <p style="margin-left: 75px; margin-bottom: 20px;">
+              raiarbina34@gmail.com<br />
+              kritikapandey076@gmail.com<br />
+              yadavaliza66@gmail.com<br />
+              prashna.regmi132@gmail.com
+            </p>
+          </div>
+
+          <!-- Google Maps -->
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.3116871896104!2d85.32266147628329!3d27.707661225476205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1908434cb3c5%3A0x1fdf1a6d41d2512d!2sIslington%20College!5e0!3m2!1sen!2snp!4v1737511255552!5m2!1sen!2snp" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--the footer section-->
+    <footer class="SPAKA-footer">
+      <div class="footer-container">
+        <div>
+          <h4 style="padding-top: 15px">SPAKAchrono</h4>
+          <a href="../homepage.html"
+            ><img src="../Pic/log3.jpg" alt="logo" width="120px"
+          /></a>
+          <p class="logo">Your Legacy in Time</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <!--quick links when clicked direct us to that page-->
+          <ul>
+            <li><a href="../homepage.html">Home</a></li>
+            <li><a href="PocketWatch.html">Products</a></li>
+            <li><a href="Reseaarch.html">Research</a></li>
+            <li><a href="ContactUs.html">Contact</a></li>
+            <li><a href="AboutUs.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <!--contact us section-->
+          <h4>Contact Us</h4>
+          <p><strong>Phone:</strong></p>
+          <p style="margin-left: 20px">+977-9816180882<br />+977-9843651432</p>
+          <p><strong>Address:</strong> Kamal Pokhari, Kathmandu, Nepal</p>
+          <p><strong>Email:</strong> raiarbina34@gmail.com<br /></p>
+        </div>
+        <div class="footer-section">
+          <!--social media section-->
+          <h4>Follow Us</h4>
+          <div>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="../Pic/facebook.png" alt="Facebook" />
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+              <img src="../Pic/twitter.png" alt="Twitter" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="../Pic/insta.png" alt="Instagram" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+              <img src="../Pic/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright Section -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Spakachrono. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
